@@ -1,5 +1,92 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import linkedinPosts from '../data/linkedin-posts.json';
+import mediumArticles from '../data/medium-articles.json';
+import chariotContent from '../data/chariot-content.json';
+
+// Define a unified post type
+interface Post {
+  title: string;
+  url: string;
+  date: Date;
+  source: 'LinkedIn' | 'Medium' | 'Chariot';
+  excerpt: string;
+  tags: string[];
+}
+
+// Helper to format date
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+// Helper to truncate text
+function truncate(text: string, maxLength: number): string {
+  if (!text) return '';
+  const clean = text.replace(/\n/g, ' ').replace(/"/g, '').trim();
+  if (clean.length <= maxLength) return clean;
+  return clean.slice(0, maxLength).trim() + '...';
+}
+
+// Helper to extract title from LinkedIn post (first sentence or first N chars)
+function extractTitle(text: string): string {
+  const clean = text.replace(/\n/g, ' ').replace(/"/g, '').trim();
+  const firstSentence = clean.match(/^[^.!?]+[.!?]/);
+  if (firstSentence && firstSentence[0].length < 100) {
+    return firstSentence[0];
+  }
+  return truncate(clean, 80);
+}
+
+// Get Chariot blog posts
+const chariotBlogs = chariotContent.filter(item => item.Type === 'Blog');
+
+// Normalize all posts into unified format
+const allPosts: Post[] = [
+  // LinkedIn posts
+  ...linkedinPosts.map(post => ({
+    title: extractTitle(post.ShareCommentary),
+    url: post.ShareLink,
+    date: new Date(post.Date),
+    source: 'LinkedIn' as const,
+    excerpt: truncate(post.ShareCommentary, 200),
+    tags: ['AI'], // Could be enhanced with keyword detection
+  })),
+
+  // Medium articles
+  ...mediumArticles.map(article => ({
+    title: article.Title,
+    url: article.URL,
+    date: new Date(article.Date),
+    source: 'Medium' as const,
+    excerpt: '', // Medium doesn't have excerpts in our data
+    tags: article.Tags ? article.Tags.split(', ') : [],
+  })),
+
+  // Chariot blogs
+  ...chariotBlogs.map(blog => ({
+    title: blog.Title,
+    url: blog.URL,
+    date: new Date(), // No date in our data, will sort to end
+    source: 'Chariot' as const,
+    excerpt: blog.Description || '',
+    tags: [],
+  })),
+];
+
+// Sort by date (newest first)
+const sortedPosts = allPosts.sort((a, b) => b.date.getTime() - a.date.getTime());
+
+// Get featured posts (most recent Medium articles + top LinkedIn posts)
+const featuredPosts = sortedPosts
+  .filter(p => p.source === 'Medium' || (p.source === 'LinkedIn' && p.excerpt.length > 100))
+  .slice(0, 5);
+
+// Get source colors
+const sourceColors: Record<string, { bg: string; text: string }> = {
+  LinkedIn: { bg: 'bg-blue-100 dark:bg-blue-900/30', text: 'text-blue-700 dark:text-blue-300' },
+  Medium: { bg: 'bg-green-100 dark:bg-green-900/30', text: 'text-green-700 dark:text-green-300' },
+  Chariot: { bg: 'bg-purple-100 dark:bg-purple-900/30', text: 'text-purple-700 dark:text-purple-300' },
+};
 ---
 
 <BaseLayout title="Writing" description="Articles and posts about AI, developer tools, and technology leadership">
@@ -8,51 +95,183 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
         Writing
       </h1>
-      <p class="text-xl text-gray-600 dark:text-gray-300 mb-12">
+      <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
         Thoughts on AI, developer tools, and technology leadership.
       </p>
 
-      <!-- Filters placeholder -->
-      <div class="flex flex-wrap gap-2 mb-8">
-        <button class="px-4 py-2 text-sm font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">
-          All
-        </button>
-        <button class="px-4 py-2 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-          AI
-        </button>
-        <button class="px-4 py-2 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-          Leadership
-        </button>
-        <button class="px-4 py-2 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-          Technical
-        </button>
+      <!-- Source stats -->
+      <div class="flex flex-wrap gap-4 mb-12 text-sm text-gray-500 dark:text-gray-400">
+        <span>{linkedinPosts.length} LinkedIn posts</span>
+        <span>&#183;</span>
+        <span>{mediumArticles.length} Medium articles</span>
+        <span>&#183;</span>
+        <span>{chariotBlogs.length} Chariot blogs</span>
       </div>
 
-      <!-- Posts grid -->
-      <div class="space-y-6">
-        {[1, 2, 3, 4, 5].map((i) => (
-          <article class="group bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-accent-300 dark:hover:border-accent-600 hover:shadow-lg transition-all duration-200">
-            <div class="flex items-start justify-between gap-4">
-              <div class="flex-1">
-                <h2 class="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-accent-600 dark:group-hover:text-accent-400">
-                  Placeholder Post Title {i}
-                </h2>
-                <p class="mt-2 text-gray-600 dark:text-gray-400 line-clamp-2">
-                  This is a placeholder for a blog post or LinkedIn article. The actual content will be loaded from the curated data files.
-                </p>
-                <div class="mt-4 flex items-center gap-4">
-                  <span class="text-sm text-gray-500 dark:text-gray-400">January 2026</span>
-                  <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300">LinkedIn</span>
-                  <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300">AI</span>
+      <!-- Featured Posts -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          Featured
+        </h2>
+        <div class="space-y-4">
+          {featuredPosts.map((post) => (
+            <a
+              href={post.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group block bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-accent-300 dark:hover:border-accent-600 hover:shadow-lg transition-all duration-200"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex-1">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-accent-600 dark:group-hover:text-accent-400">
+                    {post.title}
+                  </h3>
+                  {post.excerpt && (
+                    <p class="mt-2 text-gray-600 dark:text-gray-400 line-clamp-2">
+                      {post.excerpt}
+                    </p>
+                  )}
+                  <div class="mt-3 flex flex-wrap items-center gap-3">
+                    <span class="text-sm text-gray-500 dark:text-gray-400">
+                      {formatDate(post.date)}
+                    </span>
+                    <span class={`text-xs px-2 py-1 rounded-full ${sourceColors[post.source].bg} ${sourceColors[post.source].text}`}>
+                      {post.source}
+                    </span>
+                    {post.tags.slice(0, 2).map(tag => (
+                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+                <svg class="w-5 h-5 text-gray-400 group-hover:text-accent-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
               </div>
-              <svg class="w-5 h-5 text-gray-400 group-hover:text-accent-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </div>
-          </article>
-        ))}
+            </a>
+          ))}
+        </div>
       </div>
+
+      <!-- Medium Articles Section -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          Medium Articles
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {mediumArticles.map((article) => (
+            <a
+              href={article.URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group block bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700 hover:border-accent-300 dark:hover:border-accent-600 transition-colors"
+            >
+              <h3 class="font-medium text-gray-900 dark:text-white group-hover:text-accent-600 dark:group-hover:text-accent-400 line-clamp-2">
+                {article.Title}
+              </h3>
+              <div class="mt-3 flex flex-wrap items-center gap-2">
+                <span class="text-xs text-gray-500 dark:text-gray-400">
+                  {formatDate(new Date(article.Date))}
+                </span>
+                {article.Tags && article.Tags.split(', ').slice(0, 3).map(tag => (
+                  <span class="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 rounded text-gray-600 dark:text-gray-300">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Recent LinkedIn Posts -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          Recent LinkedIn Posts
+        </h2>
+        <div class="space-y-4">
+          {sortedPosts.filter(p => p.source === 'LinkedIn').slice(0, 15).map((post) => (
+            <a
+              href={post.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group block bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:border-accent-300 dark:hover:border-accent-600 transition-colors"
+            >
+              <p class="text-gray-700 dark:text-gray-300 line-clamp-2">
+                {post.excerpt}
+              </p>
+              <div class="mt-2 flex items-center gap-3">
+                <span class="text-xs text-gray-500 dark:text-gray-400">
+                  {formatDate(post.date)}
+                </span>
+                <span class={`text-xs px-2 py-0.5 rounded-full ${sourceColors.LinkedIn.bg} ${sourceColors.LinkedIn.text}`}>
+                  LinkedIn
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {linkedinPosts.length > 15 && (
+          <div class="mt-6 text-center">
+            <a
+              href="https://linkedin.com/in/sujankapadia"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 font-medium"
+            >
+              View all {linkedinPosts.length} posts on LinkedIn &rarr;
+            </a>
+          </div>
+        )}
+      </div>
+
+      <!-- Chariot Blogs -->
+      {chariotBlogs.length > 0 && (
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            Chariot Solutions Blog
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {chariotBlogs.slice(0, 8).map((blog) => (
+              <a
+                href={blog.URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-start gap-3 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-accent-300 dark:hover:border-accent-600 transition-colors"
+              >
+                <div class="flex-1">
+                  <h3 class="font-medium text-gray-900 dark:text-white group-hover:text-accent-600 dark:group-hover:text-accent-400 line-clamp-2">
+                    {blog.Title}
+                  </h3>
+                  {blog.Description && (
+                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400 line-clamp-1">
+                      {blog.Description}
+                    </p>
+                  )}
+                </div>
+                <svg class="w-4 h-4 text-gray-400 group-hover:text-accent-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            ))}
+          </div>
+
+          {chariotBlogs.length > 8 && (
+            <div class="mt-6 text-center">
+              <a
+                href="https://chariotsolutions.com/blog/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 font-medium"
+              >
+                View more on Chariot Solutions &rarr;
+              </a>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   </section>
 </BaseLayout>

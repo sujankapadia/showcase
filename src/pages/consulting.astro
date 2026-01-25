@@ -24,26 +24,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             {
               title: 'AI Strategy',
               desc: 'Develop a clear AI roadmap aligned with your business goals. Understand where AI can create value and how to get there.',
-              icon: '&#9733;'
+              icon: '★'
             },
             {
               title: 'Coding Agents',
               desc: 'Implement AI coding assistants effectively. Train teams, establish best practices, and measure productivity gains.',
-              icon: '&#9998;'
+              icon: '✎'
             },
             {
               title: 'Developer Tools',
               desc: 'Build or adopt tools that augment your development teams. Modern tooling for modern challenges.',
-              icon: '&#9881;'
+              icon: '⚙'
             },
             {
               title: 'AI Governance',
               desc: 'Establish frameworks for safe AI adoption. Risk management, compliance, and ethical considerations.',
-              icon: '&#9875;'
+              icon: '⚓'
             },
           ].map((area) => (
             <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-              <div class="text-3xl mb-4">{area.icon}</div>
+              <div class="text-3xl mb-4 text-accent-500">{area.icon}</div>
               <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
                 {area.title}
               </h3>
