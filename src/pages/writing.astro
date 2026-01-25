@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Writing" description="Articles and posts about AI, developer tools, and technology leadership">
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Writing
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300 mb-12">
+        Thoughts on AI, developer tools, and technology leadership.
+      </p>
+
+      <!-- Filters placeholder -->
+      <div class="flex flex-wrap gap-2 mb-8">
+        <button class="px-4 py-2 text-sm font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">
+          All
+        </button>
+        <button class="px-4 py-2 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+          AI
+        </button>
+        <button class="px-4 py-2 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+          Leadership
+        </button>
+        <button class="px-4 py-2 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+          Technical
+        </button>
+      </div>
+
+      <!-- Posts grid -->
+      <div class="space-y-6">
+        {[1, 2, 3, 4, 5].map((i) => (
+          <article class="group bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-accent-300 dark:hover:border-accent-600 hover:shadow-lg transition-all duration-200">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-accent-600 dark:group-hover:text-accent-400">
+                  Placeholder Post Title {i}
+                </h2>
+                <p class="mt-2 text-gray-600 dark:text-gray-400 line-clamp-2">
+                  This is a placeholder for a blog post or LinkedIn article. The actual content will be loaded from the curated data files.
+                </p>
+                <div class="mt-4 flex items-center gap-4">
+                  <span class="text-sm text-gray-500 dark:text-gray-400">January 2026</span>
+                  <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300">LinkedIn</span>
+                  <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300">AI</span>
+                </div>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 group-hover:text-accent-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

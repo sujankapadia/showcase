@@ -1,0 +1,83 @@
+[
+  {
+    "Title": "AI Agents Webinar: Control, Governance, and Accountability",
+    "Date": "2025-02-10",
+    "Type": "Webinar",
+    "Role": "Panelist",
+    "Location": "Wyncote, PA (135 Greenwood Avenue)",
+    "Description": "Practical frameworks for governing AI agents, mitigating AI risk, and operationalizing AI with confidence. Co-panelists: Manjit Singh (CEO Druvstar), Josh Devon (CEO Sondera). Moderator: Melissa Aarskug.",
+    "URL": "https://chariotsolutions.com/event/ai-agents-webinar-control-governance-and-accountability/"
+  },
+  {
+    "Title": "What Does It Mean to Be a Developer in the Age of AI Agents?",
+    "Date": "2025-10-15",
+    "Type": "Panel",
+    "Role": "Panelist",
+    "Location": "Radnor, PA (Certara, 4 Radnor Corporate Center)",
+    "Description": "Panel exploring how AI coding agents reshape software development and whether AI will replace or elevate engineering work. Co-panelists: Joel Confino (Vanguard), Brian O'Neill. Moderator: Grace Francisco.",
+    "URL": "https://chariotsolutions.com/event/what-does-it-mean-to-be-a-developer-in-the-age-of-ai-agents/"
+  },
+  {
+    "Title": "AMFP Greater Philadelphia Second Annual Healthcare Summit",
+    "Date": "2024-09-25",
+    "Type": "Panel",
+    "Role": "Panelist",
+    "Location": "Philadelphia",
+    "Description": "Panel: Unlocking the Future of Healthcare With AI: A Multi-Disciplinary Approach. Co-panelists: Denis Vaughn (Penn Medicine), Melissa Turner, Emily Downs.",
+    "URL": "https://chariotsolutions.com/news/post/amfp_greater_philadelphia_second_annual_healthcare_summit/"
+  },
+  {
+    "Title": "Webinar \u2014 AI in Healthcare",
+    "Date": "2024-05-17",
+    "Type": "Webinar",
+    "Role": "Speaker",
+    "Location": "Virtual",
+    "Description": "Bridging the Gap: Empowering Healthcare Innovation with AI. Presented by Women in Healthcare and Chariot Solutions. Co-speakers: Stacy DiStefano, Emily Downs, Warren Rosebraugh, Melissa Turner.",
+    "URL": "https://chariotsolutions.com/event/webinar-ai-in-healthcare/"
+  },
+  {
+    "Title": "Things I Wish I Had Known When I Started My First Development Job",
+    "Date": "2021-12-14",
+    "Type": "Webinar",
+    "Role": "Speaker",
+    "Location": "Virtual (Zip Code Wilmington)",
+    "Description": "Career advice webinar for Zip Code Wilmington development bootcamp students.",
+    "URL": "https://github.com/skapadia/zcw-things-i-wish-i-had-known"
+  },
+  {
+    "Title": "Intro to Scala \u2013 Fear No More",
+    "Date": "2016-07-20",
+    "Type": "Training",
+    "Role": "Trainer",
+    "Location": "New York, NY",
+    "Description": "Introductory Scala workshop covering language fundamentals.",
+    "URL": "https://chariotsolutions.com/event/intro-scala-fear-no/"
+  },
+  {
+    "Title": "Technical.ly Philly: AI and Coffee Chat - AI Coding Agents",
+    "Date": "2025-11-26",
+    "Type": "Talk",
+    "Role": "Speaker",
+    "Location": "Philadelphia, PA (Technical.ly HQ, Curtis Center)",
+    "Description": "Pre-Thanksgiving gathering on how AI coding agents are transforming our relationship with computers - turning them from tools we use into tools that build tools. Hosted by Christopher Wink. 51 attendees.",
+    "URL": "https://www.meetup.com/technicallyphl/events/311841313/"
+  },
+  {
+    "Title": "Don't Block on It! - Reactive NY Meetup",
+    "Date": "2016-04-27",
+    "Type": "Talk",
+    "Role": "Speaker",
+    "Location": "New York, NY (Gilt, 2 Park Ave)",
+    "Description": "Techniques for converting blocking code into non-blocking event-driven systems. Covered functional error handling, monad transformers, thread pools, circuit breaker pattern, non-blocking HTTP, and Akka Streams.",
+    "URL": "https://www.meetup.com/distributed-data-ny/events/230014834/"
+  },
+  {
+    "Title": "Intro to Scala at Philly Tech Week",
+    "Date": "2016-05-00",
+    "Type": "Training",
+    "Role": "Trainer",
+    "Location": "Philadelphia",
+    "Description": "Introductory Scala workshop at Philly Tech Week covering language fundamentals.",
+    "URL": "https://chariotsolutions.com/event/intro-scala-philly-tech-week/"
+  }
+]
