@@ -1,0 +1,24 @@
+# LinkedIn data (contains personal info, loaded from external location at build time)
+linkedin/
+
+# Node modules (when Astro project is created)
+node_modules/
+dist/
+.astro/
+
+# Environment variables
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build artifacts
+*.log
