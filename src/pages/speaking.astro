@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import speakingEvents from '../data/speaking.json';
+
+// Helper to format date
+function formatDate(dateStr: string): string {
+  // Handle malformed dates like "2016-05-00"
+  const cleanDate = dateStr.replace('-00', '-01');
+  const date = new Date(cleanDate);
+  return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+}
+
+// Sort events by date (newest first)
+const sortedEvents = [...speakingEvents].sort((a, b) =>
+  new Date(b.Date.replace('-00', '-01')).getTime() - new Date(a.Date.replace('-00', '-01')).getTime()
+);
+
+// Separate upcoming vs past (using current date)
+const now = new Date();
+const upcomingEvents = sortedEvents.filter(e => new Date(e.Date.replace('-00', '-01')) > now);
+const pastEvents = sortedEvents.filter(e => new Date(e.Date.replace('-00', '-01')) <= now);
+
+// Get unique event types for the topics section
+const speakingTopics = [
+  'AI Coding Agents and the Future of Development',
+  'AI Strategy and Governance for Enterprises',
+  'Human-AI Collaboration in Software Teams',
+  'Building Developer Tools with LLMs',
+];
+---
+
+<BaseLayout title="Speaking" description="Speaking engagements, panels, and workshops on AI and software development">
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Speaking
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300 mb-12">
+        Panels, talks, and workshops on AI, developer tools, and technology leadership.
+      </p>
+
+      <!-- Speaking topics -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          Topics I Speak About
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {speakingTopics.map((topic) => (
+            <div class="flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <span class="text-accent-500">&#10003;</span>
+              <span class="text-gray-700 dark:text-gray-300">{topic}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Upcoming Events -->
+      {upcomingEvents.length > 0 && (
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            Upcoming Events
+          </h2>
+          <div class="space-y-6">
+            {upcomingEvents.map((event) => (
+              <a
+                href={event.URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group block bg-gradient-to-br from-accent-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-xl p-6 border border-accent-200 dark:border-gray-700 hover:border-accent-300 dark:hover:border-accent-600 hover:shadow-lg transition-all duration-200"
+              >
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-accent-600 dark:group-hover:text-accent-400">
+                      {event.Title}
+                    </h3>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                      {event.Description}
+                    </p>
+                    <div class="mt-3 flex flex-wrap items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
+                      <span class="font-medium text-accent-600 dark:text-accent-400">{formatDate(event.Date)}</span>
+                      <span>&#183;</span>
+                      <span>{event.Location}</span>
+                    </div>
+                  </div>
+                  <span class="inline-flex items-center px-3 py-1 text-xs font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full flex-shrink-0">
+                    {event.Type}
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Past engagements -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          Past Engagements
+        </h2>
+        <div class="space-y-6">
+          {pastEvents.map((event) => (
+            <a
+              href={event.URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group block bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-accent-300 dark:hover:border-accent-600 hover:shadow-lg transition-all duration-200"
+            >
+              <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                <div class="flex-1">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-accent-600 dark:group-hover:text-accent-400">
+                    {event.Title}
+                  </h3>
+                  <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                    {event.Description}
+                  </p>
+                  <div class="mt-3 flex flex-wrap items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
+                    <span>{formatDate(event.Date)}</span>
+                    <span>&#183;</span>
+                    <span>{event.Location}</span>
+                    <span>&#183;</span>
+                    <span>{event.Role}</span>
+                  </div>
+                </div>
+                <span class="inline-flex items-center px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full flex-shrink-0">
+                  {event.Type}
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 p-8 bg-gradient-to-br from-accent-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-2xl border border-accent-100 dark:border-gray-700 text-center">
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+          Interested in having me speak?
+        </h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">
+          I'm available for conferences, panels, podcasts, and workshops.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center mt-6 px-6 py-3 text-base font-medium text-white bg-accent-600 hover:bg-accent-700 rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
+        >
+          Get in touch
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

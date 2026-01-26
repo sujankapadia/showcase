@@ -1,0 +1,233 @@
+[
+  {
+    "Name": "monolog",
+    "Description": "Monolog - A single-file microblogging framework that generates static HTML from Markdown with YAML front matter. Simple, minimal, self-contained.",
+    "URL": "https://github.com/sujankapadia/monolog",
+    "Language": "JavaScript",
+    "Stars": "1",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2025-10-10",
+    "Updated": "2026-01-20"
+  },
+  {
+    "Name": "blog-mirroruniverse-ai",
+    "Description": "Blog static site for blog.mirroruniverse.ai",
+    "URL": "https://github.com/sujankapadia/blog-mirroruniverse-ai",
+    "Language": "HTML",
+    "Stars": "0",
+    "Forks": "0",
+    "Private": "True",
+    "Created": "2026-01-16",
+    "Updated": "2026-01-19"
+  },
+  {
+    "Name": "cognitive-gym",
+    "Description": "Personal cognitive training app for developing observation, reasoning, and reflection skills through structured exercises",
+    "URL": "https://github.com/sujankapadia/cognitive-gym",
+    "Language": "HTML",
+    "Stars": "1",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2025-11-26",
+    "Updated": "2026-01-16"
+  },
+  {
+    "Name": "snaplist",
+    "Description": "AI-powered task manager with voice capture",
+    "URL": "https://github.com/sujankapadia/snaplist",
+    "Language": "JavaScript",
+    "Stars": "1",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2026-01-03",
+    "Updated": "2026-01-16"
+  },
+  {
+    "Name": "claude-code-analytics",
+    "Description": "Analysis tool for Claude Code - automatically capture, search, and analyze your AI development conversations",
+    "URL": "https://github.com/sujankapadia/claude-code-analytics",
+    "Language": "Python",
+    "Stars": "6",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2025-10-14",
+    "Updated": "2026-01-15"
+  },
+  {
+    "Name": "mirror-universe",
+    "Description": "",
+    "URL": "https://github.com/sujankapadia/mirror-universe",
+    "Language": "HTML",
+    "Stars": "0",
+    "Forks": "0",
+    "Private": "True",
+    "Created": "2026-01-13",
+    "Updated": "2026-01-13"
+  },
+  {
+    "Name": "mcp-gateway",
+    "Description": "Security gateway for Model Context Protocol (MCP) traffic - logging, auditing, and scanning",
+    "URL": "https://github.com/sujankapadia/mcp-gateway",
+    "Language": "Python",
+    "Stars": "1",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2026-01-07",
+    "Updated": "2026-01-09"
+  },
+  {
+    "Name": "evernote-importer",
+    "Description": "Evernote Local Viewer/Importer: FastAPI-based tool that ingests Evernote ENEX exports into a local SQLite database and serves a browser UI for offline browsing.",
+    "URL": "https://github.com/sujankapadia/evernote-importer",
+    "Language": "HTML",
+    "Stars": "1",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2025-12-24",
+    "Updated": "2026-01-06"
+  },
+  {
+    "Name": "wordle-ai-validator",
+    "Description": "Wordle Rule Validator - Converts natural language clues to DSL via Gemini API, then fetches valid words from bestwordlist.com for fast deterministic filtering",
+    "URL": "https://github.com/sujankapadia/wordle-ai-validator",
+    "Language": "HTML",
+    "Stars": "1",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2025-12-05",
+    "Updated": "2026-01-06"
+  },
+  {
+    "Name": "team-generator",
+    "Description": "Python tool for distributing event attendees across teams while minimizing family clustering",
+    "URL": "https://github.com/sujankapadia/team-generator",
+    "Language": "Python",
+    "Stars": "1",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2025-11-25",
+    "Updated": "2026-01-06"
+  },
+  {
+    "Name": "token-counter",
+    "Description": "Python token counter utility that supports OpenAI (tiktoken), Anthropic (Claude), and Google (Gemini)",
+    "URL": "https://github.com/sujankapadia/token-counter",
+    "Language": "Python",
+    "Stars": "2",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2025-10-16",
+    "Updated": "2026-01-06"
+  },
+  {
+    "Name": "runkeeper-utils",
+    "Description": "GPX run analysis utility generating heart rate zone charts, pace tracking, and calorie estimates",
+    "URL": "https://github.com/sujankapadia/runkeeper-utils",
+    "Language": "Python",
+    "Stars": "1",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2025-10-13",
+    "Updated": "2026-01-06"
+  },
+  {
+    "Name": "todo-gpt",
+    "Description": "AI-powered command-line todo app with natural language processing. Uses GPT-4.1 for conversational task management, smart date parsing, and implicit completion detection. Features interactive chat mode, multiple lists, priorities, and persistent SQLite storage.",
+    "URL": "https://github.com/sujankapadia/todo-gpt",
+    "Language": "JavaScript",
+    "Stars": "1",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2025-08-11",
+    "Updated": "2026-01-06"
+  },
+  {
+    "Name": "math-homework-generator",
+    "Description": "ChatGPT and Python based math homework generator",
+    "URL": "https://github.com/sujankapadia/math-homework-generator",
+    "Language": "",
+    "Stars": "0",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2024-01-24",
+    "Updated": "2024-01-24"
+  },
+  {
+    "Name": "template-email-sender",
+    "Description": "CLI tool to send templated emails via Python and GMail",
+    "URL": "https://github.com/sujankapadia/template-email-sender",
+    "Language": "Python",
+    "Stars": "0",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2023-04-19",
+    "Updated": "2023-05-15"
+  },
+  {
+    "Name": "ynab-langchain",
+    "Description": "Use Langchain Pandas agents to query personal transaction history",
+    "URL": "https://github.com/sujankapadia/ynab-langchain",
+    "Language": "",
+    "Stars": "0",
+    "Forks": "0",
+    "Private": "True",
+    "Created": "2023-05-18",
+    "Updated": "2023-05-18"
+  },
+  {
+    "Name": "budgeting-terraform",
+    "Description": "Terraform for Budgeting application",
+    "URL": "https://github.com/sujankapadia/budgeting-terraform",
+    "Language": "HCL",
+    "Stars": "0",
+    "Forks": "0",
+    "Private": "True",
+    "Created": "2023-04-18",
+    "Updated": "2023-04-18"
+  },
+  {
+    "Name": "organization-terraform",
+    "Description": "Terraform for managing organization and accounts, IAM, and overall network setup",
+    "URL": "https://github.com/sujankapadia/organization-terraform",
+    "Language": "HCL",
+    "Stars": "0",
+    "Forks": "0",
+    "Private": "True",
+    "Created": "2023-04-18",
+    "Updated": "2023-04-20"
+  },
+  {
+    "Name": "budgeting_store_transactions_lambda",
+    "Description": "An AWS Lambda to store transactions",
+    "URL": "https://github.com/sujankapadia/budgeting_store_transactions_lambda",
+    "Language": "Python",
+    "Stars": "0",
+    "Forks": "0",
+    "Private": "True",
+    "Created": "2023-03-31",
+    "Updated": "2023-03-31"
+  },
+  {
+    "Name": "chariot-email-templates",
+    "Description": "Repository to store email templates for emails I tend to send often, especially to multiple people.",
+    "URL": "https://github.com/sujankapadia/chariot-email-templates",
+    "Language": "Jinja",
+    "Stars": "0",
+    "Forks": "0",
+    "Private": "True",
+    "Created": "2023-04-19",
+    "Updated": "2023-04-19"
+  },
+  {
+    "Name": "my-first-aws-lambda",
+    "Description": "",
+    "URL": "https://github.com/sujankapadia/my-first-aws-lambda",
+    "Language": "Python",
+    "Stars": "0",
+    "Forks": "0",
+    "Private": "True",
+    "Created": "2023-03-16",
+    "Updated": "2023-03-17"
+  }
+]

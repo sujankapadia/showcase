@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Consulting" description="AI strategy, coding agents, and developer tools consulting services">
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          Consulting
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300">
+          Helping organizations navigate AI adoption with practical, results-driven guidance.
+        </p>
+      </div>
+
+      <!-- Areas of Expertise -->
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+          Areas of Expertise
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            {
+              title: 'AI Strategy',
+              desc: 'Develop a clear AI roadmap aligned with your business goals. Understand where AI can create value and how to get there.',
+              icon: '★'
+            },
+            {
+              title: 'Coding Agents',
+              desc: 'Implement AI coding assistants effectively. Train teams, establish best practices, and measure productivity gains.',
+              icon: '✎'
+            },
+            {
+              title: 'Developer Tools',
+              desc: 'Build or adopt tools that augment your development teams. Modern tooling for modern challenges.',
+              icon: '⚙'
+            },
+            {
+              title: 'AI Governance',
+              desc: 'Establish frameworks for safe AI adoption. Risk management, compliance, and ethical considerations.',
+              icon: '⚓'
+            },
+          ].map((area) => (
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+              <div class="text-3xl mb-4 text-accent-500">{area.icon}</div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                {area.title}
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                {area.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Engagement Types -->
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+          Engagement Types
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              title: 'Advisory',
+              desc: 'Ongoing strategic guidance for AI initiatives. Regular check-ins, decision support, and course correction.'
+            },
+            {
+              title: 'Workshops',
+              desc: 'Interactive sessions to upskill teams on AI tools, prompt engineering, and best practices.'
+            },
+            {
+              title: 'Implementation',
+              desc: 'Hands-on support for deploying AI solutions. From proof-of-concept to production.'
+            },
+          ].map((type) => (
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                {type.title}
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                {type.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Process -->
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+          How It Works
+        </h2>
+        <div class="space-y-6">
+          {[
+            { step: '1', title: 'Discovery Call', desc: 'We discuss your goals, challenges, and current state. No commitment, just conversation.' },
+            { step: '2', title: 'Proposal', desc: 'I provide a tailored proposal with scope, approach, and investment options.' },
+            { step: '3', title: 'Engagement', desc: 'We work together to achieve your goals, with regular check-ins and transparent communication.' },
+            { step: '4', title: 'Outcomes', desc: 'Measurable results and clear next steps for continued success.' },
+          ].map((item) => (
+            <div class="flex gap-6">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center text-accent-600 dark:text-accent-400 font-bold">
+                {item.step}
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white">
+                  {item.title}
+                </h3>
+                <p class="mt-1 text-gray-600 dark:text-gray-400">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 p-8 bg-gradient-to-br from-accent-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-2xl border border-accent-100 dark:border-gray-700 text-center">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+          Let's discuss your project
+        </h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
+          Ready to explore how AI can transform your organization? Let's start with a conversation.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center mt-6 px-8 py-4 text-lg font-medium text-white bg-accent-600 hover:bg-accent-700 rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
+        >
+          Schedule a call
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
