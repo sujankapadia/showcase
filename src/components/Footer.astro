@@ -15,35 +15,35 @@ const socialLinks = [
 ];
 ---
 
-<footer class="border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900">
+<footer class="border-t border-navy-700 bg-navy-950">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Brand -->
       <div>
-        <a href="/" class="text-lg font-semibold text-gray-900 dark:text-white">
+        <a href="/" class="text-lg font-semibold text-white hover:text-cyan-400 transition-colors">
           Sujan Kapadia
         </a>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+        <p class="mt-2 text-sm text-gray-400">
           Chief AI Officer | Building intelligent systems
         </p>
       </div>
 
       <!-- Quick Links -->
       <div>
-        <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider">
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">
           Quick Links
         </h3>
         <ul class="mt-4 space-y-2">
-          <li><a href="/about" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400">About</a></li>
-          <li><a href="/writing" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400">Writing</a></li>
-          <li><a href="/consulting" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400">Consulting</a></li>
-          <li><a href="/contact" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400">Contact</a></li>
+          <li><a href="/about" class="text-sm text-gray-400 hover:text-cyan-400 transition-colors">About</a></li>
+          <li><a href="/writing" class="text-sm text-gray-400 hover:text-cyan-400 transition-colors">Writing</a></li>
+          <li><a href="/consulting" class="text-sm text-gray-400 hover:text-cyan-400 transition-colors">Consulting</a></li>
+          <li><a href="/contact" class="text-sm text-gray-400 hover:text-cyan-400 transition-colors">Contact</a></li>
         </ul>
       </div>
 
       <!-- Connect -->
       <div>
-        <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider">
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">
           Connect
         </h3>
         <div class="mt-4 flex gap-4">
@@ -52,23 +52,23 @@ const socialLinks = [
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              class="text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+              class="text-gray-400 hover:text-cyan-400 transition-colors"
               aria-label={link.name}
             >
               <svg class="w-6 h-6" viewBox="0 0 24 24" set:html={link.icon} />
             </a>
           ))}
         </div>
-        <p class="mt-4 text-sm text-gray-600 dark:text-gray-400">
-          <a href="mailto:hello@sujankapadia.com" class="hover:text-accent-600 dark:hover:text-accent-400">
+        <p class="mt-4 text-sm text-gray-400">
+          <a href="mailto:hello@sujankapadia.com" class="hover:text-cyan-400 transition-colors">
             hello@sujankapadia.com
           </a>
         </p>
       </div>
     </div>
 
-    <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
-      <p class="text-sm text-gray-500 dark:text-gray-400 text-center">
+    <div class="mt-8 pt-8 border-t border-navy-700">
+      <p class="text-sm text-gray-500 text-center">
         &copy; {currentYear} Sujan Kapadia. All rights reserved.
       </p>
     </div>

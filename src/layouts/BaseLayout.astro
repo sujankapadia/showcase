@@ -37,22 +37,6 @@ const fullTitle = title === 'Sujan Kapadia' ? title : `${title} | Sujan Kapadia`
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <title>{fullTitle}</title>
-
-    <!-- Theme detection script (runs before page renders to prevent flash) -->
-    <script is:inline>
-      const theme = (() => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme');
-        }
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      })();
-
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-    </script>
   </head>
   <body class="min-h-screen flex flex-col">
     <Header />

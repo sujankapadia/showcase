@@ -12,11 +12,11 @@ const navLinks = [
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<header class="sticky top-0 z-50 bg-navy-900/80 backdrop-blur-md border-b border-navy-700">
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo / Name -->
-      <a href="/" class="text-xl font-semibold text-gray-900 dark:text-white hover:text-accent-600 dark:hover:text-accent-400 transition-colors">
+      <a href="/" class="text-xl font-semibold text-white hover:text-cyan-400 transition-colors">
         Sujan Kapadia
       </a>
 
@@ -28,52 +28,21 @@ const currentPath = Astro.url.pathname;
             class:list={[
               'px-3 py-2 text-sm font-medium rounded-lg transition-colors',
               currentPath === link.href || currentPath.startsWith(link.href + '/')
-                ? 'text-accent-600 dark:text-accent-400 bg-accent-50 dark:bg-accent-900/30'
-                : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                ? 'text-cyan-400 bg-cyan-400/10'
+                : 'text-gray-400 hover:text-white hover:bg-navy-700'
             ]}
           >
             {link.label}
           </a>
         ))}
-
-        <!-- Theme Toggle -->
-        <button
-          id="theme-toggle"
-          type="button"
-          class="ml-2 p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          aria-label="Toggle dark mode"
-        >
-          <!-- Sun icon (shown in dark mode) -->
-          <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-          <!-- Moon icon (shown in light mode) -->
-          <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-          </svg>
-        </button>
       </div>
 
       <!-- Mobile menu button -->
-      <div class="md:hidden flex items-center gap-2">
-        <button
-          id="theme-toggle-mobile"
-          type="button"
-          class="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          aria-label="Toggle dark mode"
-        >
-          <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-          <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-          </svg>
-        </button>
-
+      <div class="md:hidden">
         <button
           id="mobile-menu-button"
           type="button"
-          class="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          class="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-navy-700 transition-colors"
           aria-label="Open menu"
         >
           <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -92,8 +61,8 @@ const currentPath = Astro.url.pathname;
             class:list={[
               'px-3 py-2 text-base font-medium rounded-lg transition-colors',
               currentPath === link.href || currentPath.startsWith(link.href + '/')
-                ? 'text-accent-600 dark:text-accent-400 bg-accent-50 dark:bg-accent-900/30'
-                : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                ? 'text-cyan-400 bg-cyan-400/10'
+                : 'text-gray-400 hover:text-white hover:bg-navy-700'
             ]}
           >
             {link.label}
@@ -105,17 +74,6 @@ const currentPath = Astro.url.pathname;
 </header>
 
 <script>
-  function setupThemeToggle() {
-    const toggleButtons = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
-
-    toggleButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      });
-    });
-  }
-
   function setupMobileMenu() {
     const button = document.getElementById('mobile-menu-button');
     const menu = document.getElementById('mobile-menu');
@@ -126,12 +84,8 @@ const currentPath = Astro.url.pathname;
   }
 
   // Run on initial load
-  setupThemeToggle();
   setupMobileMenu();
 
   // Re-run on navigation (for Astro's view transitions)
-  document.addEventListener('astro:after-swap', () => {
-    setupThemeToggle();
-    setupMobileMenu();
-  });
+  document.addEventListener('astro:after-swap', setupMobileMenu);
 </script>

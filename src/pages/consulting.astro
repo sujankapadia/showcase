@@ -6,17 +6,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <p class="section-label mb-4">Services</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
           Consulting
         </h1>
-        <p class="text-xl text-gray-600 dark:text-gray-300">
+        <p class="text-xl text-gray-400">
           Helping organizations navigate AI adoption with practical, results-driven guidance.
         </p>
       </div>
 
       <!-- Areas of Expertise -->
       <div class="mt-16">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+        <h2 class="text-2xl font-bold text-white mb-8">
           Areas of Expertise
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -24,30 +25,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             {
               title: 'AI Strategy',
               desc: 'Develop a clear AI roadmap aligned with your business goals. Understand where AI can create value and how to get there.',
-              icon: '★'
+              num: '01'
             },
             {
               title: 'Coding Agents',
               desc: 'Implement AI coding assistants effectively. Train teams, establish best practices, and measure productivity gains.',
-              icon: '✎'
+              num: '02'
             },
             {
               title: 'Developer Tools',
               desc: 'Build or adopt tools that augment your development teams. Modern tooling for modern challenges.',
-              icon: '⚙'
+              num: '03'
             },
             {
               title: 'AI Governance',
               desc: 'Establish frameworks for safe AI adoption. Risk management, compliance, and ethical considerations.',
-              icon: '⚓'
+              num: '04'
             },
           ].map((area) => (
-            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-              <div class="text-3xl mb-4 text-accent-500">{area.icon}</div>
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            <div class="bg-navy-800 rounded-xl p-6 border border-navy-600 hover:border-cyan-500/50 transition-colors">
+              <span class="text-xs font-mono text-accent-400">{area.num}</span>
+              <h3 class="text-xl font-semibold text-white mt-2">
                 {area.title}
               </h3>
-              <p class="mt-2 text-gray-600 dark:text-gray-400">
+              <p class="mt-2 text-gray-400">
                 {area.desc}
               </p>
             </div>
@@ -57,7 +58,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <!-- Engagement Types -->
       <div class="mt-16">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+        <h2 class="text-2xl font-bold text-white mb-8">
           Engagement Types
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -75,11 +76,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               desc: 'Hands-on support for deploying AI solutions. From proof-of-concept to production.'
             },
           ].map((type) => (
-            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+            <div class="bg-navy-950 rounded-xl p-6 border border-navy-700">
+              <h3 class="text-lg font-semibold text-white">
                 {type.title}
               </h3>
-              <p class="mt-2 text-gray-600 dark:text-gray-400">
+              <p class="mt-2 text-gray-400">
                 {type.desc}
               </p>
             </div>
@@ -89,7 +90,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <!-- Process -->
       <div class="mt-16">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+        <h2 class="text-2xl font-bold text-white mb-8">
           How It Works
         </h2>
         <div class="space-y-6">
@@ -100,14 +101,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             { step: '4', title: 'Outcomes', desc: 'Measurable results and clear next steps for continued success.' },
           ].map((item) => (
             <div class="flex gap-6">
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center text-accent-600 dark:text-accent-400 font-bold">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-accent-500 to-cyan-500 flex items-center justify-center text-white font-bold">
                 {item.step}
               </div>
               <div>
-                <h3 class="font-semibold text-gray-900 dark:text-white">
+                <h3 class="font-semibold text-white">
                   {item.title}
                 </h3>
-                <p class="mt-1 text-gray-600 dark:text-gray-400">
+                <p class="mt-1 text-gray-400">
                   {item.desc}
                 </p>
               </div>
@@ -117,16 +118,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <!-- CTA -->
-      <div class="mt-16 p-8 bg-gradient-to-br from-accent-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-2xl border border-accent-100 dark:border-gray-700 text-center">
-        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+      <div class="mt-16 p-8 bg-gradient-to-br from-navy-800 to-navy-900 rounded-2xl border border-navy-600 text-center">
+        <h3 class="text-2xl font-bold text-white">
           Let's discuss your project
         </h3>
-        <p class="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
+        <p class="mt-2 text-gray-400 max-w-xl mx-auto">
           Ready to explore how AI can transform your organization? Let's start with a conversation.
         </p>
         <a
           href="/contact"
-          class="inline-flex items-center justify-center mt-6 px-8 py-4 text-lg font-medium text-white bg-accent-600 hover:bg-accent-700 rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
+          class="inline-flex items-center justify-center mt-6 px-8 py-4 text-lg font-medium text-white bg-gradient-to-r from-accent-500 to-cyan-500 hover:from-accent-400 hover:to-cyan-400 rounded-lg shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40 transition-all duration-200"
         >
           Schedule a call
         </a>
