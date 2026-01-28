@@ -37,6 +37,7 @@ const fullTitle = title === 'Sujan Kapadia' ? title : `${title} | Sujan Kapadia`
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <title>{fullTitle}</title>
+    <slot name="head" />
   </head>
   <body class="min-h-screen flex flex-col">
     <Header />

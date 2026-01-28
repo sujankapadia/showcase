@@ -1,0 +1,13 @@
+# Project Updates Configuration
+# Lists GitHub repos whose monolog/posts.md files are aggregated into /updates
+
+site_title: "Project Updates"
+author: "Sujan Kapadia"
+
+# Each repo should have a monolog/posts.md file with microblog posts
+repos:
+  - url: https://github.com/sujankapadia/monolog
+    name: Monolog
+
+  - url: https://github.com/sujankapadia/showcase
+    name: Showcase

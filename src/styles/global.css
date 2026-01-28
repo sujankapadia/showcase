@@ -78,3 +78,76 @@
     @apply text-accent-400 text-sm font-medium tracking-wide uppercase;
   }
 }
+
+/* Updates page - monolog content styling */
+@layer components {
+  .updates-toc {
+    @apply mb-12;
+  }
+  .updates-toc h3 {
+    @apply text-lg font-semibold text-white mb-4;
+  }
+  .updates-toc ul {
+    @apply space-y-2 list-none pl-0;
+  }
+  .updates-toc li {
+    @apply text-sm text-gray-400;
+  }
+
+  .updates-posts article {
+    @apply bg-navy-800 border border-navy-600 rounded-xl p-6 mb-6;
+    @apply hover:border-cyan-500/50 transition-all duration-300;
+  }
+  .updates-posts article header {
+    @apply mb-4 pb-4 border-b border-navy-700;
+  }
+  .updates-posts article header h2 {
+    @apply text-xl font-semibold text-white mb-1;
+  }
+  .updates-posts article header p {
+    @apply text-sm text-gray-500 mt-1;
+  }
+
+  .updates-posts .post-content {
+    @apply text-gray-300 leading-relaxed;
+  }
+  .updates-posts .post-content p {
+    @apply mb-4;
+  }
+  .updates-posts .post-content ul,
+  .updates-posts .post-content ol {
+    @apply mb-4 pl-6;
+  }
+  .updates-posts .post-content ul {
+    @apply list-disc;
+  }
+  .updates-posts .post-content ol {
+    @apply list-decimal;
+  }
+  .updates-posts .post-content li {
+    @apply mb-1;
+  }
+  .updates-posts .post-content blockquote {
+    @apply border-l-4 border-accent-500 pl-4 italic text-gray-400 my-4;
+  }
+  .updates-posts .post-content pre {
+    @apply bg-navy-950 rounded-lg p-4 overflow-x-auto mb-4;
+  }
+  .updates-posts .post-content code {
+    @apply text-sm font-mono;
+  }
+  .updates-posts .post-content :not(pre) > code {
+    @apply bg-navy-700 px-1.5 py-0.5 rounded text-cyan-300;
+  }
+  .updates-posts .post-content hr {
+    @apply border-navy-700 my-6;
+  }
+  .updates-posts .post-content strong {
+    @apply text-white font-semibold;
+  }
+
+  .project-badge {
+    @apply inline-block text-xs px-2.5 py-1 rounded-full;
+    @apply bg-accent-500/20 text-accent-400 font-medium;
+  }
+}

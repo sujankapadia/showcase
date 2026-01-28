@@ -19,6 +19,10 @@ pnpm-debug.log*
 .env
 .env.*
 
+# Generated updates files (rebuilt from source repos)
+src/data/updates-merged.md
+src/data/updates-output.html
+
 # OS files
 .DS_Store
 Thumbs.db

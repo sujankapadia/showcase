@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { readFileSync, existsSync } from 'fs';
+import { resolve } from 'path';
+
+// Read monolog-generated HTML at build time
+const outputPath = resolve(process.cwd(), 'src/data/updates-output.html');
+
+let updatesHtml = '';
+let hasContent = false;
+
+if (existsSync(outputPath)) {
+  updatesHtml = readFileSync(outputPath, 'utf-8');
+  hasContent = updatesHtml.trim().length > 0;
+}
+---
+
+<BaseLayout title="Updates" description="Project development updates and microblog posts from active projects">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11/build/styles/github-dark.min.css" />
+  </Fragment>
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="section-label mb-4">Development Log</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        Project Updates
+      </h1>
+      <p class="text-xl text-gray-400 mb-12">
+        Microblog posts tracking progress across active projects.
+      </p>
+
+      {hasContent ? (
+        <div class="updates-content" set:html={updatesHtml} />
+      ) : (
+        <div class="card-dark p-8 text-center">
+          <p class="text-gray-400">No updates available yet. Check back soon.</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11/build/highlight.min.js"></script>
+  <script is:inline>hljs.highlightAll();</script>
+</BaseLayout>
