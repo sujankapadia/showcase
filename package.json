@@ -10,6 +10,7 @@
     "refresh:repos": "node scripts/refresh-repos.mjs",
     "refresh:youtube": "node scripts/refresh-youtube.mjs",
     "refresh:chariot": "node scripts/refresh-chariot.mjs",
+    "refresh:medium": "node scripts/refresh-medium.mjs",
     "curate:linkedin": "node scripts/curate-linkedin.mjs",
     "csv-to-json": "node scripts/csv-to-json.mjs",
     "preview": "astro preview",
