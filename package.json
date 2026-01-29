@@ -9,6 +9,7 @@
     "build:astro": "astro build",
     "refresh:repos": "node scripts/refresh-repos.mjs",
     "refresh:youtube": "node scripts/refresh-youtube.mjs",
+    "refresh:chariot": "node scripts/refresh-chariot.mjs",
     "curate:linkedin": "node scripts/curate-linkedin.mjs",
     "csv-to-json": "node scripts/csv-to-json.mjs",
     "preview": "astro preview",
@@ -21,6 +22,8 @@
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.2.23",
+    "cheerio": "^1.2.0",
     "csv-parse": "^6.1.0",
     "js-yaml": "^4.1.1",
     "monolog": "github:sujankapadia/monolog"
