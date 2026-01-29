@@ -9,6 +9,7 @@
     "build:astro": "astro build",
     "refresh:repos": "node scripts/refresh-repos.mjs",
     "refresh:youtube": "node scripts/refresh-youtube.mjs",
+    "curate:linkedin": "node scripts/curate-linkedin.mjs",
     "csv-to-json": "node scripts/csv-to-json.mjs",
     "preview": "astro preview",
     "astro": "astro"
