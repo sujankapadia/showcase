@@ -8,6 +8,7 @@
     "build:updates": "node scripts/build-updates.mjs",
     "build:astro": "astro build",
     "refresh:repos": "node scripts/refresh-repos.mjs",
+    "refresh:youtube": "node scripts/refresh-youtube.mjs",
     "csv-to-json": "node scripts/csv-to-json.mjs",
     "preview": "astro preview",
     "astro": "astro"
