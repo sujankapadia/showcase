@@ -18,6 +18,8 @@ The showcase site pulls data from several sources — GitHub, YouTube, LinkedIn,
 
 Lesson: LLM-based extraction is great for one-off exploration, but for repeatable data pipelines, deterministic HTML parsing wins.
 
+*This post was produced by Claude Code.*
+
 +++
 title: "Building the Showcase Site"
 date: 2026-01-25
