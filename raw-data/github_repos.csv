@@ -1,0 +1,23 @@
+Name,Description,URL,Language,Stars,Forks,Private,Created,Updated
+showcase,"Personal showcase website built with Astro 5 and Tailwind CSS v4",https://github.com/sujankapadia/showcase,Astro,0,0,False,2026-01-28,2026-01-29
+monolog,"Monolog - A single-file microblogging framework that generates static HTML from Markdown with YAML front matter. Simple, minimal, self-contained.",https://github.com/sujankapadia/monolog,JavaScript,1,0,False,2025-10-10,2026-01-28
+blog-mirroruniverse-ai,"Blog static site for blog.mirroruniverse.ai",https://github.com/sujankapadia/blog-mirroruniverse-ai,HTML,0,0,True,2026-01-16,2026-01-19
+cognitive-gym,"Personal cognitive training app for developing observation, reasoning, and reflection skills through structured exercises",https://github.com/sujankapadia/cognitive-gym,HTML,1,0,False,2025-11-26,2026-01-16
+snaplist,"AI-powered task manager with voice capture",https://github.com/sujankapadia/snaplist,JavaScript,1,0,False,2026-01-03,2026-01-16
+claude-code-analytics,"Analysis tool for Claude Code - automatically capture, search, and analyze your AI development conversations",https://github.com/sujankapadia/claude-code-analytics,Python,6,0,False,2025-10-14,2026-01-15
+mirror-universe,"",https://github.com/sujankapadia/mirror-universe,HTML,0,0,True,2026-01-13,2026-01-13
+mcp-gateway,"Security gateway for Model Context Protocol (MCP) traffic - logging, auditing, and scanning",https://github.com/sujankapadia/mcp-gateway,Python,1,0,False,2026-01-07,2026-01-09
+evernote-importer,"Evernote Local Viewer/Importer: FastAPI-based tool that ingests Evernote ENEX exports into a local SQLite database and serves a browser UI for offline browsing.",https://github.com/sujankapadia/evernote-importer,HTML,1,0,False,2025-12-24,2026-01-06
+wordle-ai-validator,"Wordle Rule Validator - Converts natural language clues to DSL via Gemini API, then fetches valid words from bestwordlist.com for fast deterministic filtering",https://github.com/sujankapadia/wordle-ai-validator,HTML,1,0,False,2025-12-05,2026-01-06
+team-generator,"Python tool for distributing event attendees across teams while minimizing family clustering",https://github.com/sujankapadia/team-generator,Python,1,0,False,2025-11-25,2026-01-06
+token-counter,"Python token counter utility that supports OpenAI (tiktoken), Anthropic (Claude), and Google (Gemini)",https://github.com/sujankapadia/token-counter,Python,2,0,False,2025-10-16,2026-01-06
+runkeeper-utils,"GPX run analysis utility generating heart rate zone charts, pace tracking, and calorie estimates",https://github.com/sujankapadia/runkeeper-utils,Python,1,0,False,2025-10-13,2026-01-06
+todo-gpt,"AI-powered command-line todo app with natural language processing. Uses GPT-4.1 for conversational task management, smart date parsing, and implicit completion detection. Features interactive chat mode, multiple lists, priorities, and persistent SQLite storage.",https://github.com/sujankapadia/todo-gpt,JavaScript,1,0,False,2025-08-11,2026-01-06
+math-homework-generator,"ChatGPT and Python based math homework generator",https://github.com/sujankapadia/math-homework-generator,,0,0,False,2024-01-24,2024-01-24
+template-email-sender,"CLI tool to send templated emails via Python and GMail",https://github.com/sujankapadia/template-email-sender,Python,0,0,False,2023-04-19,2023-05-15
+ynab-langchain,"Use Langchain Pandas agents to query personal transaction history",https://github.com/sujankapadia/ynab-langchain,,0,0,True,2023-05-18,2023-05-18
+budgeting-terraform,"Terraform for Budgeting application",https://github.com/sujankapadia/budgeting-terraform,HCL,0,0,True,2023-04-18,2023-04-18
+organization-terraform,"Terraform for managing organization and accounts, IAM, and overall network setup",https://github.com/sujankapadia/organization-terraform,HCL,0,0,True,2023-04-18,2023-04-20
+budgeting_store_transactions_lambda,"An AWS Lambda to store transactions",https://github.com/sujankapadia/budgeting_store_transactions_lambda,Python,0,0,True,2023-03-31,2023-03-31
+chariot-email-templates,"Repository to store email templates for emails I tend to send often, especially to multiple people.",https://github.com/sujankapadia/chariot-email-templates,Jinja,0,0,True,2023-04-19,2023-04-19
+my-first-aws-lambda,"",https://github.com/sujankapadia/my-first-aws-lambda,Python,0,0,True,2023-03-16,2023-03-17

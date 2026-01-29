@@ -24,13 +24,13 @@
     "Description": "Panel discussion on evolving developer roles - October 15, 2025"
   },
   {
-    "Title": "Adding Conversational AI to Your App \u2014 Part 2: Adding Conversation History to the Context",
+    "Title": "Adding Conversational AI to Your App — Part 2: Adding Conversation History to the Context",
     "URL": "https://chariotsolutions.com/blog/post/adding-conversational-ai-to-your-app-part-2-adding-conversation-history-to-the-context/",
     "Type": "Blog",
     "Description": "Technical guide on implementing conversation history in LLM tools"
   },
   {
-    "Title": "Adding Conversational AI to Your App \u2014 Part 1: Converting Natural Language into JSON Actions",
+    "Title": "Adding Conversational AI to Your App — Part 1: Converting Natural Language into JSON Actions",
     "URL": "https://chariotsolutions.com/blog/post/adding-conversational-ai-to-your-app-part-1-converting-natural-language-into-json-actions/",
     "Type": "Blog",
     "Description": "Building a natural language interface for a text-based to-do app using TypeScript, Node, and OpenAI"
@@ -132,7 +132,7 @@
     "Description": "Webinar on AI applications in marketing"
   },
   {
-    "Title": "Webinar \u2014 AI in Healthcare",
+    "Title": "Webinar — AI in Healthcare",
     "URL": "https://chariotsolutions.com/event/webinar-ai-in-healthcare/",
     "Type": "Event",
     "Description": "Healthcare and software experts discuss AI in healthcare"
@@ -144,7 +144,7 @@
     "Description": "Sujan organized evening watching conference talks - October 26"
   },
   {
-    "Title": "Intro to Scala \u2013 Fear No More",
+    "Title": "Intro to Scala – Fear No More",
     "URL": "https://chariotsolutions.com/event/intro-scala-fear-no/",
     "Type": "Event/Training",
     "Description": "Trainer: Sujan Kapadia - July 20, 2016 - New York"
@@ -444,7 +444,7 @@
     "Description": "Sujan, Ken, and Joel discuss new Apple iPhones - 34:07"
   },
   {
-    "Title": "DevNews #58: The London Eye \u2013 of Sauron",
+    "Title": "DevNews #58: The London Eye – of Sauron",
     "URL": "https://chariotsolutions.com/podcast/devnews-58-the-london-eye-of-sauron/",
     "Type": "Podcast",
     "Description": "34:18"

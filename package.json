@@ -7,6 +7,8 @@
     "build": "npm run build:updates && astro build",
     "build:updates": "node scripts/build-updates.mjs",
     "build:astro": "astro build",
+    "refresh:repos": "node scripts/refresh-repos.mjs",
+    "csv-to-json": "node scripts/csv-to-json.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -17,6 +19,7 @@
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
+    "csv-parse": "^6.1.0",
     "js-yaml": "^4.1.1",
     "monolog": "github:sujankapadia/monolog"
   }
