@@ -23,13 +23,15 @@
 - **Tagline:** Role-focused (e.g., "Chief AI Officer | Building intelligent systems")
 
 ### Visual Identity
-- **Headshot:** User-provided professional photo
-- **Color Mode:** System preference default with manual toggle (dark/light)
-- **Accent Color:** Blue/Teal
-  - Primary: `#0ea5e9` (sky-500) or `#14b8a6` (teal-500)
-  - Use for: links, CTAs, hover states, highlights
-- **Typography:** Clean, modern sans-serif (Inter, Plus Jakarta Sans, or similar)
-- **Overall Aesthetic:** Clean, content-first, professional with subtle pizazz
+- **Headshot:** Profile photo from GitHub (public/headshot.jpg)
+- **Color Mode:** Dark-only (Astro.build-inspired theme)
+- **Color Palette:**
+  - Backgrounds: Navy scale (#0a0b0f to #242836)
+  - Primary accent: Purple/Magenta (#d946ef) — section labels, badges
+  - Secondary accent: Cyan (#22d3ee) — links, interactive elements, hover states
+  - Gradient effects on hero section, CTA buttons, avatar ring
+- **Typography:** Inter, clean modern sans-serif
+- **Overall Aesthetic:** Dark, modern, developer-focused with gradient accents
 
 ---
 
@@ -42,6 +44,7 @@
 /writing/[slug]       → Individual post (for Medium articles hosted on-site)
 /speaking             → Speaking engagements
 /projects             → GitHub repos & side projects
+/updates              → Aggregated project microblog posts (via monolog)
 /media                → Videos & podcasts
 /consulting           → Consulting services
 /contact              → Contact form & links
@@ -130,6 +133,15 @@
 - **Engagement Types:** Advisory, workshops, implementation support
 - **Process:** How engagements typically work
 - **CTA:** "Let's discuss your project" → Contact form
+
+#### Updates (`/updates`)
+- **Aggregated microblog** from tracked GitHub repos using [monolog](https://github.com/sujankapadia/monolog)
+- Configured via `updates.config.yaml` listing GitHub repo URLs
+- Build script (`scripts/build-updates.mjs`) fetches `monolog/posts.md` from each repo, merges chronologically, runs monolog CLI
+- Custom monolog template outputs content-only HTML, embedded in Astro BaseLayout
+- Each post tagged with source project via `.project-badge`
+- Table of contents with anchor links, permalinks with click-to-copy
+- Syntax highlighting via highlight.js (github-dark theme)
 
 #### Contact (`/contact`)
 - Contact form (name, email, message, inquiry type)
@@ -293,7 +305,7 @@ claude --prompt "Analyze linkedin/complete-export/Shares.csv and select:
 | Buttons | Hover glow/pulse | Subtle `box-shadow` animation on accent color |
 | Page sections | Fade-in on scroll | Intersection Observer + CSS transitions |
 | Links | Underline animation | `background-size` or `border-bottom` transition |
-| Color mode toggle | Smooth transition | `transition: background-color 0.3s, color 0.3s` |
+| Gradient accents | Hero glow, CTA buttons | `bg-gradient-to-r from-accent-500 to-cyan-500` |
 | Navigation | Active state indicator | Accent color underline or background |
 
 ### Responsive Design
@@ -313,15 +325,15 @@ claude --prompt "Analyze linkedin/complete-export/Shares.csv and select:
   - Content collections for posts
   - Component islands for interactive elements
 
-### Styling: Tailwind CSS
+### Styling: Tailwind CSS v4
 - Utility-first, easy theming
-- Dark mode support built-in (`class` strategy)
-- Custom accent color configuration
+- Custom theme via `@theme` directive in global.css
+- Custom color tokens: navy (backgrounds), accent (purple), cyan (interactive)
 
-### Hosting: Vercel or Netlify
-- Free tier sufficient
+### Hosting: Netlify
 - Automatic deployments from Git
-- Edge functions if needed later
+- Astro Netlify adapter configured
+- Build command: `npm run build` (runs `build:updates` then `astro build`)
 
 ### Optional Integrations
 - **Analytics:** Plausible or Fathom (privacy-focused)
@@ -335,21 +347,19 @@ claude --prompt "Analyze linkedin/complete-export/Shares.csv and select:
 ```
 /
 ├── public/
-│   ├── images/
-│   │   ├── headshot.jpg
-│   │   └── logos/
-│   └── favicon.ico
+│   ├── headshot.jpg
+│   └── favicon.svg
+├── scripts/
+│   └── build-updates.mjs          (Fetch & merge monolog posts)
+├── templates/
+│   └── updates-template.html      (Monolog content-only template)
+├── monolog/
+│   └── posts.md                   (This repo's own microblog posts)
+├── updates.config.yaml            (Tracked repos config)
 ├── src/
 │   ├── components/
 │   │   ├── Header.astro
-│   │   ├── Footer.astro
-│   │   ├── ThemeToggle.astro
-│   │   ├── PostCard.astro
-│   │   ├── VideoCard.astro
-│   │   ├── ProjectCard.astro
-│   │   ├── SpotlightPost.astro
-│   │   ├── TestimonialCard.astro
-│   │   └── FeaturedIn.astro
+│   │   └── Footer.astro
 │   ├── layouts/
 │   │   └── BaseLayout.astro
 │   ├── pages/
@@ -358,25 +368,22 @@ claude --prompt "Analyze linkedin/complete-export/Shares.csv and select:
 │   │   ├── writing.astro
 │   │   ├── speaking.astro
 │   │   ├── projects.astro
+│   │   ├── updates.astro
 │   │   ├── media.astro
 │   │   ├── consulting.astro
 │   │   └── contact.astro
-│   ├── content/
-│   │   ├── posts/          (Medium articles as markdown)
-│   │   └── config.ts
 │   ├── data/
-│   │   ├── curated-posts.json    (AI-curated LinkedIn posts)
+│   │   ├── linkedin-posts.json
 │   │   ├── youtube-videos.json
 │   │   ├── github-repos.json
+│   │   ├── medium-articles.json
+│   │   ├── chariot-content.json
 │   │   ├── speaking.json
-│   │   ├── testimonials.json     (from LinkedIn recommendations)
-│   │   └── featured-in.json
+│   │   ├── updates-merged.md      (Generated - gitignored)
+│   │   └── updates-output.html    (Generated - gitignored)
 │   └── styles/
 │       └── global.css
-├── scripts/
-│   └── curate-content.sh         (AI curation script)
 ├── astro.config.mjs
-├── tailwind.config.mjs
 └── package.json
 ```
 
@@ -448,6 +455,9 @@ claude --prompt "Analyze linkedin/complete-export/Shares.csv and select:
 | **LinkedIn curation** | AI-assisted via Claude Code, local script + manual trigger |
 | **Consulting page** | Yes, dedicated `/consulting` page |
 | **Testimonials** | Yes, from LinkedIn Recommendations + manually paraphrased endorsements |
+| **Theme** | Dark-only, Astro.build-inspired (no light mode toggle) |
+| **Hosting** | Netlify with Astro Netlify adapter |
+| **Project updates** | Aggregated from tracked repos via monolog microblogging tool |
 
 ---
 
