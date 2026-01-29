@@ -192,7 +192,7 @@ async function main() {
     process.exit(1);
   }
 
-  const cmd = `monolog -i "${mergedPath}" -o "${outputPath}" -t "${templatePath}" --permalinks`;
+  const cmd = `npx monolog -i "${mergedPath}" -o "${outputPath}" -t "${templatePath}" --permalinks`;
   console.log(`Running: ${cmd}\n`);
 
   try {
