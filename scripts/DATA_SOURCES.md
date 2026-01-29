@@ -9,8 +9,8 @@ Documents how each data file in `raw-data/` was originally sourced and how to re
 | `github_repos.csv` | 22 | GitHub API (`gh` CLI) | `npm run refresh:repos` |
 | `youtube_videos.csv` | 31 | YouTube playlist (`yt-dlp`) | `npm run refresh:youtube` |
 | `linkedin_ai_posts.csv` | 43 | LinkedIn export + AI keyword curation | `npm run curate:linkedin` (requires fresh export) |
-| `chariot_content.csv` | 75 | Chariot Solutions website scrape | Manual (see below) |
-| `medium_articles.csv` | 9 | Medium profile scrape | Manual (see below) |
+| `chariot_content.csv` | 75 | Chariot Solutions website scrape | `npm run refresh:chariot` |
+| `medium_articles.csv` | 9 | Medium RSS feed | `npm run refresh:medium` |
 | `speaking_engagements.csv` | 9 | Web research + manual additions | Manual (see below) |
 
 ## Pipeline
@@ -41,7 +41,7 @@ All CSV files are converted to JSON via `npm run csv-to-json` (`scripts/csv-to-j
 
 ### LinkedIn AI Posts
 - **Script:** `scripts/curate-linkedin.mjs`
-- **Command:** `npm run curate:linkedin` *(not yet wired up)*
+- **Command:** `npm run curate:linkedin`
 - **Source:** LinkedIn data export (`linkedin/complete-export/Shares.csv`)
 - **Process:**
   1. Download a fresh LinkedIn data export (Settings > Get a copy of your data)
@@ -49,22 +49,28 @@ All CSV files are converted to JSON via `npm run csv-to-json` (`scripts/csv-to-j
   3. Run the curation script — takes the 50 most recent posts and filters by AI-related keywords
 - **AI Keywords:** ai, artificial intelligence, machine learning, ml, llm, gpt, claude, openai, anthropic, gemini, agent, chatgpt, neural, deep learning, model, prompt, token, embedding, inference
 
+### Chariot Solutions Content
+- **Script:** `scripts/refresh-chariot.mjs`
+- **Command:** `npm run refresh:chariot`
+- **Source:** Scraped from `https://chariotsolutions.com/?s=sujan` using `cheerio` CSS selectors
+- **Requires:** Network access to chariotsolutions.com
+- **Content types:** Blog posts, Podcasts/TechChat episodes, Events, News, and more
+- **Columns:** Title, URL, Type, Description, Date
+- **Date fetching:** Dates are extracted from individual post pages (`<time>` element). Cached in the CSV so subsequent runs only fetch dates for new entries. Pages without dates are marked `none` to avoid re-fetching.
+- **Manual entries:** Additional entries not found in search results can be added to `raw-data/chariot_content_manual.csv`. The script merges these in (additive only, matched by URL).
+- **Notes:** Follows pagination automatically. Filters out non-content types (e.g., staff profile pages). Deterministic — produces identical output on every run.
+
+### Medium Articles
+- **Script:** `scripts/refresh-medium.mjs`
+- **Command:** `npm run refresh:medium`
+- **Source:** Medium RSS feed at `https://medium.com/feed/@sujankapadia` parsed with `cheerio` (XML mode)
+- **Requires:** Network access to medium.com
+- **Columns:** Title, URL, Date, Tags
+- **Notes:** Medium blocks direct HTML scraping (403), so the RSS feed is used instead. Strips tracking query parameters from URLs.
+
 ---
 
 ## Manual Refresh
-
-### Chariot Solutions Content
-- **File:** `raw-data/chariot_content.csv`
-- **Original source:** Scraped from `https://chariotsolutions.com/?s=sujan` (pages 1-8) using Claude's WebFetch tool
-- **Content types:** Blog posts (13), Podcasts/TechChat episodes (49), Events (5), News (2), Other (6)
-- **Columns:** Title, URL, Type, Description
-- **To refresh:** Search `chariotsolutions.com/?s=sujan` and extract all results. Each result has a title, URL, content type, and description. Compare against existing CSV for new entries.
-
-### Medium Articles
-- **File:** `raw-data/medium_articles.csv`
-- **Original source:** Scraped from `https://medium.com/@sujankapadia` profile page using Claude's WebFetch tool
-- **Columns:** Title, URL, Date, Tags
-- **To refresh:** Visit the Medium profile page and extract article titles, URLs, publication dates, and tags. Compare against existing CSV for new entries.
 
 ### Speaking Engagements
 - **File:** `raw-data/speaking_engagements.csv`
@@ -86,6 +92,8 @@ To refresh all automated data and rebuild:
 ```bash
 npm run refresh:repos
 npm run refresh:youtube
+npm run refresh:chariot
+npm run refresh:medium
 npm run csv-to-json
 npm run build
 ```
