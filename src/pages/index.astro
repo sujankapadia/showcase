@@ -3,10 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import linkedinPosts from '../data/linkedin-posts.json';
 import githubRepos from '../data/github-repos.json';
 import { readFileSync, existsSync } from 'fs';
+import { resolve } from 'path';
 
 // Parse latest update from merged markdown
 let latestUpdate: { title: string; date: string; anchor: string } | null = null;
-const updatesPath = new URL('../data/updates-merged.md', import.meta.url).pathname;
+const updatesPath = resolve(process.cwd(), 'src/data/updates-merged.md');
 if (existsSync(updatesPath)) {
   const md = readFileSync(updatesPath, 'utf-8');
   // Find the first post block (skip the site metadata block)
