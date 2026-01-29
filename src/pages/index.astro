@@ -2,6 +2,28 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import linkedinPosts from '../data/linkedin-posts.json';
 import githubRepos from '../data/github-repos.json';
+import { readFileSync, existsSync } from 'fs';
+
+// Parse latest update from merged markdown
+let latestUpdate: { title: string; date: string; anchor: string } | null = null;
+const updatesPath = new URL('../data/updates-merged.md', import.meta.url).pathname;
+if (existsSync(updatesPath)) {
+  const md = readFileSync(updatesPath, 'utf-8');
+  // Find the first post block (skip the site metadata block)
+  const blocks = md.split(/^\+\+\+$/m).filter(b => b.trim());
+  // blocks[0] = site metadata, blocks[1] = first post frontmatter, blocks[2] = first post content, ...
+  if (blocks.length >= 2) {
+    const frontmatter = blocks[1];
+    const titleMatch = frontmatter.match(/title:\s*"(.+?)"/);
+    const dateMatch = frontmatter.match(/date:\s*(\d{4}-\d{2}-\d{2})/);
+    if (titleMatch && dateMatch) {
+      const title = titleMatch[1];
+      const date = dateMatch[1];
+      const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      latestUpdate = { title, date, anchor: `${date}-${slug}` };
+    }
+  }
+}
 
 // Helper to format date
 function formatDate(dateStr: string): string {
@@ -90,19 +112,24 @@ const languageColors: Record<string, string> = {
     </div>
   </section>
 
-  <!-- Featured In Section -->
-  <section class="py-12 border-y border-navy-700">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-center text-sm text-gray-500 uppercase tracking-wider mb-8">
-        Featured In
-      </p>
-      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60">
-        <span class="text-lg font-medium text-gray-400">Technical.ly</span>
-        <span class="text-lg font-medium text-gray-400">Chariot Solutions</span>
-        <span class="text-lg font-medium text-gray-400">Zip Code Wilmington</span>
+  <!-- Latest Update Teaser -->
+  {latestUpdate && (
+    <section class="py-4 border-y border-navy-700">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <a href={`/updates#${latestUpdate.anchor}`} class="flex items-center justify-center gap-3 group">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
+          </span>
+          <span class="text-sm text-gray-400">
+            <span class="text-gray-500">Latest Post:</span>{' '}
+            <span class="text-gray-300 group-hover:text-cyan-400 transition-colors">{latestUpdate.title}</span>{' '}
+            <span class="text-gray-600">&mdash; {latestUpdate.date}</span>
+          </span>
+        </a>
       </div>
-    </div>
-  </section>
+    </section>
+  )}
 
   <!-- Latest Thinking Section -->
   <section class="py-16 md:py-24">
