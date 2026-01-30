@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Built with Claude Code" description="This site was built entirely through conversation with Claude Code. Here's what that process looked like — and what it reveals about working with AI coding agents.">
+  <!-- Hero -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="section-label mb-4">Behind the Scenes</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        Built with
+        <span class="gradient-text">Claude Code</span>
+      </h1>
+      <p class="text-xl text-gray-400 mb-16">
+        This site was built entirely through conversation with
+        <a href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition-colors">Claude Code</a>.
+        Here's what that process looked like&mdash;and what it reveals about working with AI coding agents.
+      </p>
+
+      <!-- The Big Picture -->
+      <div class="mb-20">
+        <p class="section-label mb-4">For Everyone</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-8">
+          The Big Picture
+        </h2>
+
+        <div class="space-y-6 text-gray-300 leading-relaxed">
+          <p>
+            This project started the way many do&mdash;with a folder full of scattered resources.
+            LinkedIn exports, YouTube playlists, GitHub repos, blog posts across multiple platforms,
+            speaking engagement histories. The kind of content that every professional accumulates
+            over years but never has time to organize into anything cohesive.
+          </p>
+
+          <p>
+            The difference here is that the folder was shared with Claude Code, an AI coding agent.
+            And instead of manually sorting, formatting, and assembling everything myself, I described
+            what I wanted and let the agent do the work.
+          </p>
+
+          <p>
+            Claude Code read through the exported files, figured out their structures, and started building.
+            It retrieved data from six different platforms&mdash;parsing RSS feeds, calling APIs, scraping
+            HTML where no API existed&mdash;and normalized everything into a consistent format. When it
+            needed to understand how personal showcase websites are typically structured, it researched
+            patterns online. When I pointed it at a website whose visual style I liked, it studied the
+            design and adapted it.
+          </p>
+
+          <p>
+            The entire site&mdash;every page, every data pipeline, every deployment configuration&mdash;was
+            built through this kind of back-and-forth conversation. I provided direction and judgment.
+            The agent handled implementation at a pace no single developer could match.
+          </p>
+
+          <p>
+            The broader point is this: if you collect your resources in one place and give an AI coding
+            agent access, it can analyze, research, and synthesize across all of them&mdash;producing
+            websites, documents, presentations, or whatever artifact you need. That's a fundamentally
+            different workflow from building things by hand.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+          {[
+            { label: '6', desc: 'Content sources aggregated automatically', icon: '01' },
+            { label: '9+', desc: 'Pages designed and built through conversation', icon: '02' },
+            { label: '100%', desc: 'Code written by Claude Code, directed by a human', icon: '03' },
+          ].map((item) => (
+            <div class="bg-navy-800 border border-navy-600 rounded-xl p-6 hover:border-cyan-500/50 transition-colors">
+              <span class="text-xs font-mono text-accent-400">{item.icon}</span>
+              <p class="text-2xl font-bold text-white mt-2">{item.label}</p>
+              <p class="text-gray-400 mt-1 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Technical Details -->
+      <div class="mb-16">
+        <p class="section-label mb-4">For Technical Readers</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-8">
+          Under the Hood
+        </h2>
+
+        <h3 class="text-xl font-semibold text-white mt-2 mb-6">Data Engineering</h3>
+
+        <div class="space-y-6 text-gray-300 leading-relaxed">
+          <p>
+            AI coding agents are remarkably good at the unglamorous work of data engineering&mdash;retrieving,
+            parsing, transforming, joining, and manipulating data from heterogeneous sources. This site
+            pulls from six of them, each requiring a different strategy:
+          </p>
+        </div>
+
+        <div class="space-y-4 mt-6">
+          {[
+            { source: 'LinkedIn', method: 'CSV export → JSON transformation', color: 'bg-blue-500/20 text-blue-400' },
+            { source: 'Medium', method: 'RSS feed parsing via Node.js script', color: 'bg-green-500/20 text-green-400' },
+            { source: 'GitHub', method: 'GitHub API via authenticated REST calls', color: 'bg-gray-500/20 text-gray-400' },
+            { source: 'YouTube', method: 'YouTube Data API v3 channel query', color: 'bg-red-500/20 text-red-400' },
+            { source: 'Chariot Blog', method: 'HTML scraping with cheerio', color: 'bg-purple-500/20 text-purple-400' },
+            { source: 'Updates', method: 'Hand-written Markdown with frontmatter-like delimiters', color: 'bg-cyan-500/20 text-cyan-400' },
+          ].map((item) => (
+            <div class="flex items-center gap-4 bg-navy-800 border border-navy-600 rounded-lg p-4 hover:border-cyan-500/50 transition-colors">
+              <span class={`text-xs font-medium px-2.5 py-1 rounded-full whitespace-nowrap ${item.color}`}>
+                {item.source}
+              </span>
+              <span class="text-gray-400 text-sm">{item.method}</span>
+            </div>
+          ))}
+        </div>
+
+        <div class="space-y-6 text-gray-300 leading-relaxed mt-8">
+          <p>
+            Claude Code wrote every refresh script, choosing the right approach for each source.
+            Medium has a well-structured RSS feed, so a lightweight XML parser works.
+            The Chariot blog has no API, so it required full HTML scraping with
+            <code class="bg-navy-700 px-1.5 py-0.5 rounded text-cyan-300 text-sm font-mono">cheerio</code>.
+            LinkedIn posts come from a manual CSV export that gets normalized into the same JSON shape
+            as everything else. The agent handled edge cases&mdash;malformed dates, missing fields,
+            encoding issues&mdash;and produced consistent schemas across all of them.
+          </p>
+        </div>
+
+        <h3 class="text-xl font-semibold text-white mt-10 mb-6">Research and Design</h3>
+
+        <div class="space-y-6 text-gray-300 leading-relaxed">
+          <p>
+            Claude Code didn't just write code. It researched how personal showcase websites are
+            typically structured, laid out, and styled. When I pointed it at
+            <a href="https://astro.build" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition-colors">astro.build</a>
+            as a style reference, it studied the site's design language&mdash;the dark theme, the color
+            system, the spacing&mdash;and adapted those patterns into the
+            <a href="https://tailwindcss.com" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition-colors">Tailwind</a>
+            configuration and component library that drives this site. Getting from zero to a deployed,
+            styled website happened remarkably fast because the agent could both research and implement
+            in the same session.
+          </p>
+        </div>
+
+        <h3 class="text-xl font-semibold text-white mt-10 mb-6">Monolog Integration</h3>
+
+        <div class="space-y-6 text-gray-300 leading-relaxed">
+          <p>
+            One of the more satisfying pieces was incorporating
+            <a href="https://github.com/sujankapadia/monolog" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition-colors">Monolog</a>,
+            a microblogging tool I built for myself. I originally vibe-coded it as a personal tool,
+            then evolved it to be agent-friendly&mdash;adding informational help output from the CLI,
+            especially around custom templates. Claude Code picked up the tool, understood its interface,
+            built a custom template matching the site's theme, and wired it into the build pipeline.
+            Multiple repos each maintain a
+            <code class="bg-navy-700 px-1.5 py-0.5 rounded text-cyan-300 text-sm font-mono">posts.md</code>
+            file that gets aggregated and rendered at build time. The fact that an AI agent could adopt a
+            tool I built, understand its conventions, and integrate it cleanly was a strong validation of
+            designing tools with agent consumption in mind.
+          </p>
+        </div>
+
+        <h3 class="text-xl font-semibold text-white mt-10 mb-6">The Developer Marketing Problem</h3>
+
+        <div class="space-y-6 text-gray-300 leading-relaxed">
+          <p>
+            Altogether, this project demonstrates something practical: it's now remarkably easy for a
+            developer to market themselves, capture project information, and produce content&mdash;without
+            ever leaving their engineering flow. No context-switching to a CMS. No wrestling with a
+            website builder. Just a conversation with an agent that understands your codebase, your data,
+            and your intent.
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12 pt-12 border-t border-navy-700">
+        <p class="text-gray-400 mb-6">
+          Interested in how AI agents can accelerate your workflow?
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="/consulting"
+            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-accent-500 to-cyan-500 hover:from-accent-400 hover:to-cyan-400 rounded-lg shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40 transition-all duration-200"
+          >
+            Work with me
+          </a>
+          <a
+            href="/projects"
+            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-gray-300 bg-navy-800 border border-navy-600 hover:border-cyan-500/50 hover:text-white rounded-lg transition-all duration-200"
+          >
+            View projects
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
