@@ -52,6 +52,24 @@ const ogImage = new URL('/headshot.jpg', Astro.site);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
+    <!-- JSON-LD: Person -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sujan Kapadia",
+      "url": Astro.site?.toString(),
+      "image": ogImage.toString(),
+      "jobTitle": "Chief AI Officer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Chariot Solutions"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/sujankapadia",
+        "https://github.com/sujankapadia"
+      ]
+    })} />
+
     <title>{fullTitle}</title>
     <slot name="head" />
   </head>

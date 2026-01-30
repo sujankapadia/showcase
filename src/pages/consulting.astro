@@ -3,6 +3,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Consulting" description="AI strategy, coding agents, and developer tools consulting services">
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Consulting, Transformation & Implementation",
+    "description": "Helping organizations navigate AI adoption with practical, results-driven guidance.",
+    "serviceType": "Technology Consulting",
+    "provider": {
+      "@type": "Person",
+      "name": "Sujan Kapadia",
+      "url": "https://sujankapadia.com"
+    },
+    "areaServed": "United States"
+  })} />
   <section class="py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">

@@ -68,6 +68,12 @@ const languageColors: Record<string, string> = {
 ---
 
 <BaseLayout>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Sujan Kapadia",
+    "url": "https://sujankapadia.com"
+  })} />
   <!-- Hero Section -->
   <section class="py-20 md:py-32 relative overflow-hidden">
     <!-- Background gradient effect -->
