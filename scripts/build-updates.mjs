@@ -51,7 +51,7 @@ async function fetchPostsFile(repo) {
 
     const content = Buffer.from(result, 'base64').toString('utf-8');
     console.log(`[OK] Fetched ${postsPath} from ${name} (via gh api)`);
-    return { name, content };
+    return { name, url, content };
   } catch {
     // Fallback: raw.githubusercontent.com (public repos only)
     try {
@@ -62,7 +62,7 @@ async function fetchPostsFile(repo) {
       }
       const content = await response.text();
       console.log(`[OK] Fetched ${postsPath} from ${name} (via raw URL)`);
-      return { name, content };
+      return { name, url, content };
     } catch (fetchError) {
       console.warn(`[WARN] Could not fetch posts from ${name}: ${fetchError.message}`);
       console.warn(`       Skipping this repo.`);
@@ -72,7 +72,7 @@ async function fetchPostsFile(repo) {
 }
 
 // --- Step 3: Extract individual posts from a posts.md file ---
-function extractPosts(content, projectName) {
+function extractPosts(content, projectName, projectUrl) {
   // Split on +++ delimiters to find YAML front matter blocks
   // Pattern: +++\n<yaml>\n+++ followed by content until next +++ or EOF
   const blocks = content.split(/^\+\+\+\s*$/m);
@@ -107,6 +107,7 @@ function extractPosts(content, projectName) {
       yaml: yamlBlock.trim(),
       content: contentBlock,
       projectName,
+      projectUrl,
       date: dateStr,
     });
   }
@@ -136,8 +137,8 @@ async function main() {
 
   // Extract and tag posts from each repo
   let allPosts = [];
-  for (const { name, content } of successful) {
-    const posts = extractPosts(content, name);
+  for (const { name, url, content } of successful) {
+    const posts = extractPosts(content, name, url);
     allPosts.push(...posts);
   }
 
@@ -171,7 +172,7 @@ async function main() {
     merged += '+++\n\n';
 
     // Inject project badge as raw HTML at the start of content
-    const badge = `<span class="project-badge">${post.projectName}</span>\n\n`;
+    const badge = `<a href="${post.projectUrl}" target="_blank" rel="noopener noreferrer" class="project-badge">${post.projectName}</a>\n\n`;
     merged += badge;
 
     if (post.content) {

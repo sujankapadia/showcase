@@ -147,7 +147,8 @@
   }
 
   .project-badge {
-    @apply inline-block text-xs px-2.5 py-1 rounded-full;
+    @apply inline-block text-xs px-2.5 py-1 rounded-full no-underline;
     @apply bg-accent-500/20 text-accent-400 font-medium;
+    @apply hover:bg-accent-500/30 hover:text-accent-300 transition-colors;
   }
 }
