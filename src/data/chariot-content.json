@@ -1,452 +1,527 @@
 [
   {
-    "Title": "Chariot Solutions Announces Key Leadership Appointments: Sujan Kapadia Named Chief AI Officer",
+    "Title": "Chariot Solutions Announces Key Leadership Appointments: Sujan Kapadia Named Chief AI Officer, Rod Biresch Promoted to Director of Engineering",
     "URL": "https://chariotsolutions.com/news/post/chariot-solutions-announces-key-leadership-appointments/",
     "Type": "News",
-    "Description": "Announcement of Sujan Kapadia's appointment as Chief AI Officer - August 11, 2025"
-  },
-  {
-    "Title": "15 Minutes With: Sujan Kapadia",
-    "URL": "https://chariotsolutions.com/blog/post/15-minutes-with-sujan-kapadia/",
-    "Type": "Blog/Interview",
-    "Description": "First episode discussing remote team effectiveness with focus on human elements"
-  },
-  {
-    "Title": "Chariot Solutions in 2025: AI, Modernization, and the Evolving Role of Technologists",
-    "URL": "https://chariotsolutions.com/blog/post/chariot-solutions-in-2025/",
-    "Type": "Blog",
-    "Description": "Reflection on 2025 acceleration in AI tools and organizational approaches"
-  },
-  {
-    "Title": "Event Recap: What Does It Mean to Be a Developer in the Age of AI Agents?",
-    "URL": "https://chariotsolutions.com/blog/post/event-recap-what-does-it-mean-to-be-a-developer-in-the-age-of-ai-agents/",
-    "Type": "Blog",
-    "Description": "Panel discussion on evolving developer roles - October 15, 2025"
-  },
-  {
-    "Title": "Adding Conversational AI to Your App \u2014 Part 2: Adding Conversation History to the Context",
-    "URL": "https://chariotsolutions.com/blog/post/adding-conversational-ai-to-your-app-part-2-adding-conversation-history-to-the-context/",
-    "Type": "Blog",
-    "Description": "Technical guide on implementing conversation history in LLM tools"
-  },
-  {
-    "Title": "Adding Conversational AI to Your App \u2014 Part 1: Converting Natural Language into JSON Actions",
-    "URL": "https://chariotsolutions.com/blog/post/adding-conversational-ai-to-your-app-part-1-converting-natural-language-into-json-actions/",
-    "Type": "Blog",
-    "Description": "Building a natural language interface for a text-based to-do app using TypeScript, Node, and OpenAI"
-  },
-  {
-    "Title": "Automate the Boring Stuff with AI",
-    "URL": "https://chariotsolutions.com/blog/post/automate-the-boring-stuff-with-ai-2/",
-    "Type": "Blog",
-    "Description": "Project created to deepen understanding of generative AI while addressing workflow gaps"
-  },
-  {
-    "Title": "Strategies for Addressing Tech Debt",
-    "URL": "https://chariotsolutions.com/blog/post/strategies-for-addressing-tech-debt/",
-    "Type": "Blog",
-    "Description": "Businesses should approach technical debt as a routine, scheduled part of development"
-  },
-  {
-    "Title": "A Look Back to Philly ETE 2022",
-    "URL": "https://chariotsolutions.com/blog/post/a-look-back-to-philly-ete-2022/",
-    "Type": "Blog",
-    "Description": "Killer keynote by Cory Doctorow, lively audience, and lots of new tech at Philly ETE 2022"
-  },
-  {
-    "Title": "A Look Back to ETE 2021",
-    "URL": "https://chariotsolutions.com/blog/post/a-look-back-to-ete-2021/",
-    "Type": "Blog",
-    "Description": "Reflecting on another successful year of Philly ETE - logistics, community, and virtual benefits"
-  },
-  {
-    "Title": "Another Perspective on Remote Work",
-    "URL": "https://chariotsolutions.com/blog/post/another-perspective-on-remote-work/",
-    "Type": "Blog",
-    "Description": "Flexibility for consultants in terms of where they work is good for business and clients"
-  },
-  {
-    "Title": "Discussion on the Future of Tech in 2020 and Beyond",
-    "URL": "https://chariotsolutions.com/blog/post/discussion-on-the-future-of-tech-in-2020-and-beyond-by-the-chariot-solutions-team/",
-    "Type": "Blog",
-    "Description": "Team perspective on tools and technologies for 2020 onward"
-  },
-  {
-    "Title": "What is on our Tech Radar for 2019?",
-    "URL": "https://chariotsolutions.com/blog/post/what-is-on-our-tech-radar-for-2019/",
-    "Type": "Blog",
-    "Description": "Team members discuss technologies of interest for 2019"
-  },
-  {
-    "Title": "The DataPhilly Meetups",
-    "URL": "https://chariotsolutions.com/blog/post/the-dataphilly-meetups/",
-    "Type": "Blog",
-    "Description": "DataPhilly talks expose you to topics you don't encounter everyday"
-  },
-  {
-    "Title": "Converting a Java Spring application to Scala",
-    "URL": "https://chariotsolutions.com/blog/post/converting-java-spring-to-scala/",
-    "Type": "Blog",
-    "Description": "Programming approaches for Spring applications in Scala"
-  },
-  {
-    "Title": "Simply explained: Akka Streams Backpressure",
-    "URL": "https://chariotsolutions.com/blog/post/simply-explained-akka-streams-backpressure/",
-    "Type": "Blog",
-    "Description": "Tutorial demonstrating backpressure in Akka Streams using a doughnut factory analogy - August 2, 2016"
-  },
-  {
-    "Title": "Sujan Kapadia - Staff Profile",
-    "URL": "https://chariotsolutions.com/about/sujan-kapadia/",
-    "Type": "Profile",
-    "Description": "Chief AI Officer - Over two decades of experience delivering complex, high-impact solutions"
-  },
-  {
-    "Title": "AMFP Greater Philadelphia Second Annual Healthcare Summit",
-    "URL": "https://chariotsolutions.com/news/post/amfp_greater_philadelphia_second_annual_healthcare_summit/",
-    "Type": "News",
-    "Description": "Panel on Unlocking the Future of Healthcare With AI - September 25, 2024"
-  },
-  {
-    "Title": "Bridging the Gap: Empowering Healthcare Innovation with Powerful AI Solutions",
-    "URL": "https://chariotsolutions.com/presentation/bridging-the-gap-empowering-healthcare-innovation-with-powerful-ai-solutions/",
-    "Type": "Presentation",
-    "Description": "Session bridging healthcare professionals and software developers for AI - May 17"
-  },
-  {
-    "Title": "AI Agents Webinar: Control, Governance, and Accountability",
-    "URL": "https://chariotsolutions.com/event/ai-agents-webinar-control-governance-and-accountability/",
-    "Type": "Event",
-    "Description": "Session on governing AI agents, mitigating risk, and operationalizing AI"
-  },
-  {
-    "Title": "What Does It Mean to Be a Developer in the Age of AI Agents?",
-    "URL": "https://chariotsolutions.com/event/what-does-it-mean-to-be-a-developer-in-the-age-of-ai-agents/",
-    "Type": "Event",
-    "Description": "Explores developer role transformation with AI coding agents"
-  },
-  {
-    "Title": "Unleashing AI in Marketing: Strategies to Transform Your Business",
-    "URL": "https://chariotsolutions.com/event/unleashing-ai-in-marketing-strategies-to-transform-your-business/",
-    "Type": "Event",
-    "Description": "Webinar on AI applications in marketing"
-  },
-  {
-    "Title": "Webinar \u2014 AI in Healthcare",
-    "URL": "https://chariotsolutions.com/event/webinar-ai-in-healthcare/",
-    "Type": "Event",
-    "Description": "Healthcare and software experts discuss AI in healthcare"
-  },
-  {
-    "Title": "ETE Screencast Night",
-    "URL": "https://chariotsolutions.com/event/video-watching-meetup/",
-    "Type": "Event",
-    "Description": "Sujan organized evening watching conference talks - October 26"
-  },
-  {
-    "Title": "Intro to Scala \u2013 Fear No More",
-    "URL": "https://chariotsolutions.com/event/intro-scala-fear-no/",
-    "Type": "Event/Training",
-    "Description": "Trainer: Sujan Kapadia - July 20, 2016 - New York"
-  },
-  {
-    "Title": "Intro to Scala at Philly Tech Week",
-    "URL": "https://chariotsolutions.com/event/intro-scala-philly-tech-week/",
-    "Type": "Event/Training",
-    "Description": "Introductory workshop covering Scala fundamentals"
-  },
-  {
-    "Title": "TechChat Tuesdays #62: Spring Boot 3.1.0 with DaShaun Carter",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-62-spring-boot-3-1-0-with-dashaun-carter/",
-    "Type": "Podcast",
-    "Description": "Spring Boot 3.1.0, scaling to zero, cloud native buildpacks - 52:55"
-  },
-  {
-    "Title": "TechChat Tuesdays #59: Project Valhalla, Sandpack 2.0, and Developing Cross-Platform Apps",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-59-project-valhalla-sandpack-2-0-and-developing-cross-platform-apps/",
-    "Type": "Podcast",
-    "Description": "Ken Rimple and Sujan Kapadia discuss Valhalla, Sandpack 2.0 - 1:04:06"
-  },
-  {
-    "Title": "TechChat Tuesdays #56: Context switching and scaling Mastodon",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-56-the-cloudy-layers-of-modern-programming-context-switching-and-scaling-mastodon/",
-    "Type": "Podcast",
-    "Description": "Programming layers, context switching, Mastodon scaling - 55:57"
-  },
-  {
-    "Title": "TechChat Tuesdays #53: Boycotting Wayland, and banishing the leap second",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-53-boycotting-wayland-and-banishing-the-leap-second/",
-    "Type": "Podcast",
-    "Description": "Ken Rimple and Sujan Kapadia - 44:44"
-  },
-  {
-    "Title": "TechChat Tuesdays #47: Dev News Ultra",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-47-dev-news-ultra/",
-    "Type": "Podcast",
-    "Description": "Development news briefs, Apple events - 43:04"
-  },
-  {
-    "Title": "TechChat Tuesdays #46: Dev News and Kotlin Deep Dive",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-46-dev-news-and-kotlin-deep-dive/",
-    "Type": "Podcast",
-    "Description": "Development news and Kotlin exploration - 1:19:37"
-  },
-  {
-    "Title": "TechChat Tuesdays #45: How do we learn new things?",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-45-how-do-we-learn-new-things/",
-    "Type": "Podcast",
-    "Description": "Personal processes around learning new tech - 57:33"
-  },
-  {
-    "Title": "TechChat Tuesdays #44: Dev News Grab Bag",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-44-dev-news-grab-bag/",
-    "Type": "Podcast",
-    "Description": "Tesla UX, Wordle, OS X 12.2 - 42:06"
-  },
-  {
-    "Title": "TechChat Tuesdays #43: Dev News, SPA Patterns, and Kent C. Dodds Interview",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-43-dev-news-spa-patterns-and-an-exclusive-interview-with-kent-c-dodds/",
-    "Type": "Podcast",
-    "Description": "Interview with Kent C. Dodds, Director of Developer Experience at Remix - 1:30:50"
-  },
-  {
-    "Title": "TechChat Tuesdays #41: Tetris in ClojureScript, Terraform 1.0, and Slack hackers",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-41-tetris-in-clojurescript-terraform-1-0-and-slack-hackers/",
-    "Type": "Podcast",
-    "Description": "Security concerns, Terraform updates - 35:52"
-  },
-  {
-    "Title": "TechChat Tuesdays #40: Chip Shortages, SolarWinds Hackers, and Google I/O Recap",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-40-chip-shortages-solarwinds-hackers-and-a-google-i-o-recap/",
-    "Type": "Podcast",
-    "Description": "Intel chip shortage, SolarWinds security, Google I/O 2021 - 36:10"
-  },
-  {
-    "Title": "TechChat Tuesdays #39: Scala 3, Pair Programming, and Windows/Apple Rivalry",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-39-scala-3-pair-programming-and-a-rekindled-windows-apple-rivalry/",
-    "Type": "Podcast",
-    "Description": "Ken Rimple and Sujan Kapadia - 40:38"
-  },
-  {
-    "Title": "TechChat Tuesdays #38: Apple's 'Spring Loaded' Recap",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-38-apples-spring-loaded-recap-and-more/",
-    "Type": "Podcast",
-    "Description": "Ken Rimple and Sujan Kapadia - 42:07"
-  },
-  {
-    "Title": "TechChat Tuesdays #37: OpenSearch, Rust News, and the Rails of React",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-37-opensearch-rust-rails-of-react/",
-    "Type": "Podcast",
-    "Description": "Sujan Kapadia and Ken Rimple - 44:18"
-  },
-  {
-    "Title": "TechChat Tuesdays #36: Django 3.2, TP Robots, and New Jersey?",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-36-django-3-2-tp-robots-and-new-jersey/",
-    "Type": "Podcast",
-    "Description": "Host: Sujan Kapadia (Ken Rimple absent) - 54:24"
-  },
-  {
-    "Title": "TechChat Tuesdays #35: Nivo, DALL-E and NPM Vulnerabilities",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-35-nivo-dall-e-npm-vulnerabilities/",
-    "Type": "Podcast",
-    "Description": "Machine learning, data visualization, OSI model - 56:16"
-  },
-  {
-    "Title": "TechChat Tuesdays #34: JDK, NFTs, and ERC-721",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-34-jdk-nfts-and-erc-721/",
-    "Type": "Podcast",
-    "Description": "Host: Sujan Kapadia - 30:33"
-  },
-  {
-    "Title": "TechChat Tuesdays #33: Rust, Rust-based Utilities, and Security with Jason Stelzer",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-33-rust-rust-based-utilities-and-security-with-jason-stelzer/",
-    "Type": "Podcast",
-    "Description": "Ken Rimple, Sujan Kapadia, and Jason Stelzer - 46:01"
-  },
-  {
-    "Title": "TechChat Tuesdays #32: Git for Data, and ASCIIDoctor Tooling",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-32-git-data-asciidoctor-tooling/",
-    "Type": "Podcast",
-    "Description": "Git for data, Microsoft Mesh, ASCIIDoctor - 51:20"
-  },
-  {
-    "Title": "TechChat Tuesdays #31: Python Turns 30, and Chrome 90",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-31-this-week-in-dev-news/",
-    "Type": "Podcast",
-    "Description": "Python 30th anniversary, Chrome 90, tech naming conventions"
-  },
-  {
-    "Title": "TechChat Tuesdays #30: The Mars Landing, and more",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-30-the-mars-landing-and-more/",
-    "Type": "Podcast",
-    "Description": "Mars landing, software laws, cryptocurrency mining"
-  },
-  {
-    "Title": "TechChat Tuesdays #29: Rust, Radical Candor, and more",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-29-rust-radical-candor/",
-    "Type": "Podcast",
-    "Description": "Rust, Radical Candor, virtual jam sessions"
-  },
-  {
-    "Title": "TechChat Tuesdays #28: TensorFlow with Rich Freedman",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-28-tensorflow-rich-freedman/",
-    "Type": "Podcast",
-    "Description": "Sujan hosts - machine learning, TensorFlow, Arduino projects"
-  },
-  {
-    "Title": "TechChat Tuesdays #27: This Week in Dev News",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-27-this-week-in-dev-news/",
-    "Type": "Podcast",
-    "Description": "CockroachDB spatial indexing, TinyML, Maven daemon"
-  },
-  {
-    "Title": "TechChat Tuesdays #26: Android Development with Joe Berger",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-26-android-development-with-joe-berger/",
-    "Type": "Podcast",
-    "Description": "Interview with Chariot's Android developer Joe Berger"
-  },
-  {
-    "Title": "TechChat Tuesdays #25: This Week in Dev News",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-25-this-week-in-dev-news/",
-    "Type": "Podcast",
-    "Description": "Ken Rimple and Becca discuss development news"
-  },
-  {
-    "Title": "TechChat Tuesdays #24: This Week in Dev News",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-24-this-week-in-dev-news/",
-    "Type": "Podcast",
-    "Description": "AWS Lambda, Ruby 3.0, M1 discussions, Apple store closures, LISP"
-  },
-  {
-    "Title": "TechChat Tuesdays #23: This Week in Dev News",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-23-this-week-in-devnews/",
-    "Type": "Podcast",
-    "Description": "CockroachDB spatial indexing, TinyML, Maven daemon"
-  },
-  {
-    "Title": "TechChat Tuesdays #22: AWS re:Invent Happenings",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-22-aws-reinvent-announcements-news/",
-    "Type": "Podcast",
-    "Description": "AWS re:Invent news, tools, and announcements"
-  },
-  {
-    "Title": "TechChat Tuesdays #21: Post-Mortem Review of the AWS Outage with Keith Gregory",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-21-post-mortem-review-of-the-aws-outage-with-keith-gregory-aws-practice-lead/",
-    "Type": "Podcast",
-    "Description": "Root causes of AWS outage - 44:06"
-  },
-  {
-    "Title": "TechChat Tuesdays #20: From There To Here",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-20-from-there-to-here/",
-    "Type": "Podcast",
-    "Description": "Computing innovation from Zilog through Apple M1 - 55:28"
-  },
-  {
-    "Title": "TechChat Tuesdays #19: Special Guest Eric Snyder",
-    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-19-special-guest-eric-snyder/",
-    "Type": "Podcast",
-    "Description": "Eric, Ken and Sujan bring dev topics to livestream - 43:39"
+    "Description": "FOR IMMEDIATE RELEASE Wyncote, PA — Monday, August 11, 2025 — Chariot Solutions, a leader in software development and innovative technology consulting, is pleased to announce two major leadership appointments designed to drive the company’s next phase of growth and innovation. Sujan Kapadia has been named Chief AI Officer, a newly created role, and Rod … Read More",
+    "Date": "none"
   },
   {
     "Title": "TechChat Tuesdays #18: Dev News with Sujan Kapadia",
     "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-18-dev-news-with-sujan-kapadia/",
     "Type": "Podcast",
-    "Description": "Development topics with Sujan Kapadia as special guest - 53:48"
+    "Description": "",
+    "Date": "2020-11-12"
   },
   {
-    "Title": "TechCast #99: James Roper on Scala",
-    "URL": "https://chariotsolutions.com/podcast/techcast-99-james-roper-scala/",
-    "Type": "Podcast",
-    "Description": "Sujan Kapadia talks to James Roper about Scala"
+    "Title": "15 Minutes With: Sujan Kapadia",
+    "URL": "https://chariotsolutions.com/blog/post/15-minutes-with-sujan-kapadia/",
+    "Type": "Blog",
+    "Description": "In the first episode of 15 Minutes With, Tracey Welson-Rossman and Sujan Kapadia discuss ideas to help remote teams work more effectively, while focusing on the human side of things.",
+    "Date": "2020-04-01"
   },
   {
-    "Title": "TechCast #98: Adriaan Moors on Scala",
-    "URL": "https://chariotsolutions.com/podcast/techcast-98-adriaan-moors-scala/",
-    "Type": "Podcast",
-    "Description": "Sujan interviews Adriaan Moors, Scala Tech Lead at Lightbend"
-  },
-  {
-    "Title": "TechCast #97: Heather Miller on Scala",
-    "URL": "https://chariotsolutions.com/podcast/techcast-97-heather-miller-scala/",
-    "Type": "Podcast",
-    "Description": "Sujan and Ken speak with Heather Miller, Executive Director of Scala Center"
-  },
-  {
-    "Title": "TechCast #96: Philly ETE Happy Hour Chat",
-    "URL": "https://chariotsolutions.com/podcast/techcast-96-philly-ete-happy-hour-chat/",
-    "Type": "Podcast",
-    "Description": "Ken and Sujan discuss tech news with five Philly ETE speakers"
-  },
-  {
-    "Title": "TechCast #95: Doc Norton on Agile Metrics",
-    "URL": "https://chariotsolutions.com/podcast/techcast-95-doc-norton-agile-metrics-velocity-not-goal/",
-    "Type": "Podcast",
-    "Description": "Agile Metrics: Velocity is NOT the Goal"
-  },
-  {
-    "Title": "TechCast #94: Luke Wagner on WebAssembly",
-    "URL": "https://chariotsolutions.com/podcast/techcast-94-luke-wagner-webassembly/",
-    "Type": "Podcast",
-    "Description": "Mozilla research engineer on WebAssembly development"
-  },
-  {
-    "Title": "TechCast #93: Ari Lerner on Angular 2",
-    "URL": "https://chariotsolutions.com/podcast/techcast-93-ari-lerner-angular-2/",
-    "Type": "Podcast",
-    "Description": "TypeScript, observables, and Angular 2 adoption"
-  },
-  {
-    "Title": "TechCast #79: Sujan Kapadia and Ken Rimple talk about OSCON 2013",
+    "Title": "TechCast #79 – Chariot’s Sujan Kapadia and Ken Rimple talk about OSCON 2013",
     "URL": "https://chariotsolutions.com/podcast/techcast-79-chariots-sujan-kapadia-and-ken-rimple-talk-about-oscon-2013/",
     "Type": "Podcast",
-    "Description": "Conversation about Sujan's attendance at OSCON 2013 - 21:05"
+    "Description": "",
+    "Date": "2013-07-26"
   },
   {
-    "Title": "DevNews #102: TACO, terrible testing, and party comets",
+    "Title": "AI Agents Webinar: Control, Governance, and Accountability",
+    "URL": "https://chariotsolutions.com/event/ai-agents-webinar-control-governance-and-accountability/",
+    "Type": "Event",
+    "Description": "In this fast-evolving era of generative AI and autonomous agents, organizations face a dual challenge: harnessing the power of intelligent systems while maintaining control, accountability, and trust. This session brings together cybersecurity leadership, AI expertise, and industry experience to explore practical frameworks for governing AI agents, mitigating AI risk, and operationalizing AI with confidence. Our … Read More",
+    "Date": "none"
+  },
+  {
+    "Title": "Chariot Solutions in 2025: AI, Modernization, and the Evolving Role of Technologists",
+    "URL": "https://chariotsolutions.com/blog/post/chariot-solutions-in-2025/",
+    "Type": "Blog",
+    "Description": "2025 was a year of acceleration—not just in tools, but in how organizations think about building, shipping, and sustaining software. At Chariot Solutions, our blog reflected the questions we were hearing most often from clients, partners, and the broader technology community: How do we move from experimenting with AI to using it responsibly on a … Read More",
+    "Date": "2025-12-29"
+  },
+  {
+    "Title": "Event Recap: What Does It Mean to Be a Developer in the Age of AI Agents?",
+    "URL": "https://chariotsolutions.com/blog/post/event-recap-what-does-it-mean-to-be-a-developer-in-the-age-of-ai-agents/",
+    "Type": "Blog",
+    "Description": "What Does It Mean to Be a Developer in the Age of AI Agents? October 15, 2025, Philadelphia, PA At a recent Chariot Solutions panel discussion hosted at Certara (thanks Martin Snyder!), technology leaders gathered to explore one of the most pressing questions facing the software industry today: how is the developer’s role evolving as … Read More",
+    "Date": "2025-10-17"
+  },
+  {
+    "Title": "What Does It Mean to Be a Developer in the Age of AI Agents?",
+    "URL": "https://chariotsolutions.com/event/what-does-it-mean-to-be-a-developer-in-the-age-of-ai-agents/",
+    "Type": "Event",
+    "Description": "What Does It Mean to Be a Developer in the Age of AI Agents? AI coding agents and IDE-integrated assistants are poised to reshape how we build software. As these tools become more sophisticated and widely adopted, developers and technical leaders face critical questions about the future of the profession. Will AI replace certain types … Read More",
+    "Date": "none"
+  },
+  {
+    "Title": "Adding Conversational AI to Your App — Part 2: Adding Conversation History to the Context",
+    "URL": "https://chariotsolutions.com/blog/post/adding-conversational-ai-to-your-app-part-2-adding-conversation-history-to-the-context/",
+    "Type": "Blog",
+    "Description": "Tool Limitations In Part 1, we went over converting natural language requests into commands, using LLMs. That’s a nice improvement from having to enter slash commands, but the current tool still has two major limitations: No flexible editing: There’s no way to update or delete an existing item using natural language. When referring to a … Read More",
+    "Date": "2025-08-26"
+  },
+  {
+    "Title": "Adding Conversational AI to Your App — Part 1: Converting Natural Language into JSON Actions",
+    "URL": "https://chariotsolutions.com/blog/post/adding-conversational-ai-to-your-app-part-1-converting-natural-language-into-json-actions/",
+    "Type": "Blog",
+    "Description": "What We’re Building When I recently paired with Claude Code to build a text-based to-do app (code available on Github, disclaimer: mostly generated by Claude), I wanted to add a simple natural language interface. In this post, we’ll build that feature using TypeScript, Node, and an OpenAI model, without using any special frameworks that might … Read More",
+    "Date": "2025-08-14"
+  },
+  {
+    "Title": "Automate the Boring Stuff with AI",
+    "URL": "https://chariotsolutions.com/blog/post/automate-the-boring-stuff-with-ai-2/",
+    "Type": "Blog",
+    "Description": "My motivation for creating tools often stems from a desire to get familiar with new technologies. This project was no different; I wanted to deepen my understanding of Generative AI. However, this wasn’t the primary reason for its creation. The real driving force was a persistent gap in my workflow that I couldn’t ignore any … Read More",
+    "Date": "2025-02-24"
+  },
+  {
+    "Title": "Unleashing AI in Marketing: Strategies to Transform Your Business",
+    "URL": "https://chariotsolutions.com/event/unleashing-ai-in-marketing-strategies-to-transform-your-business/",
+    "Type": "Event",
+    "Description": "Slice Communications and Chariot Solutions Presents Unleashing AI in Marketing: Strategies to Transform Your Business Join us for an insightful webinar exploring how AI can support your marketing strategy. Led by a panel of experts, this session will cover real-world applications, from content creation to inclusive prompt engineering. Attendees will gain actionable insights into leveraging … Read More",
+    "Date": "none"
+  },
+  {
+    "Title": "AMFP Greater Philadelphia Second Annual Healthcare Summit",
+    "URL": "https://chariotsolutions.com/news/post/amfp_greater_philadelphia_second_annual_healthcare_summit/",
+    "Type": "News",
+    "Description": "Exciting news! Sujan Kapadia, Director of Consulting/Engineering at Chariot Solution, will be speaking at the AMFP Greater Philadelphia Second Annual Healthcare Summit. Wednesday, September 25, 2024 as a part of a panel discussion, Unlocking the Future of Healthcare With AI: A Multi-Disciplinary Approach Sujan will be part of an exceptional lineup of healthcare leaders and … Read More",
+    "Date": "none"
+  },
+  {
+    "Title": "Automate the Boring Stuff with AI",
+    "URL": "https://chariotsolutions.com/blog/post/automate-the-boring-stuff-with-ai/",
+    "Type": "Blog",
+    "Description": "My motivation for creating tools often stems from a desire to get familiar with new technologies. This project was no different; I wanted to deepen my understanding of Generative AI. However, this wasn’t the primary reason for its creation. The real driving force was a persistent gap in my workflow that I couldn’t ignore any … Read More",
+    "Date": "2024-06-04"
+  },
+  {
+    "Title": "Bridging the Gap: Empowering Healthcare Innovation with Powerful AI Solutions",
+    "URL": "https://chariotsolutions.com/presentation/bridging-the-gap-empowering-healthcare-innovation-with-powerful-ai-solutions/",
+    "Type": "Presentation",
+    "Description": "Unlocking the Potential of AI in Healthcare Together The healthcare industry faces complex challenges, and Artificial Intelligence (AI) has the potential to revolutionize how we address them. This session brought together both healthcare professionals and software developers that bridge the expertise gap and develop impactful AI solutions. This webinar took place on May 17th … Read More",
+    "Date": "2024-05-20"
+  },
+  {
+    "Title": "Webinar — AI in Healthcare",
+    "URL": "https://chariotsolutions.com/event/webinar-ai-in-healthcare/",
+    "Type": "Event",
+    "Description": "Women in Healthcare and Chariot Solutions Presents Bridging the Gap: Empowering Healthcare Innovation with Powerful AI Solutions Unlocking the Potential of AI in Healthcare Together The healthcare industry faces complex challenges, and Artificial Intelligence (AI) has the potential to revolutionize how we address them. This session brings together both healthcare professionals and software … Read More",
+    "Date": "none"
+  },
+  {
+    "Title": "Strategies for Addressing Tech Debt",
+    "URL": "https://chariotsolutions.com/blog/post/strategies-for-addressing-tech-debt/",
+    "Type": "Blog",
+    "Description": "Ignoring tech debt because it’s expensive doesn’t make the problem go away — it only kicks the can down the road. Businesses should approach technical debt as a routine, scheduled part of their development process.",
+    "Date": "2024-04-11"
+  },
+  {
+    "Title": "TechChat Tuesdays #62: Spring Boot 3.1.0 with DaShaun Carter",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-62-spring-boot-3-1-0-with-dashaun-carter/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2023-06-07"
+  },
+  {
+    "Title": "TechChat Tuesdays #59: Project Valhalla, Sandpack 2.0, and Developing Cross-Platform Apps",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-59-project-valhalla-sandpack-2-0-and-developing-cross-platform-apps/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2023-02-21"
+  },
+  {
+    "Title": "TechChat Tuesdays #56: The ‘cloudy layers’ of modern programming, context switching, and scaling Mastodon",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-56-the-cloudy-layers-of-modern-programming-context-switching-and-scaling-mastodon/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2023-01-03"
+  },
+  {
+    "Title": "TechChat Tuesdays #53: Boycotting Wayland, and banishing the leap second",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-53-boycotting-wayland-and-banishing-the-leap-second/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2022-07-27"
+  },
+  {
+    "Title": "A Look Back to Philly ETE 2022",
+    "URL": "https://chariotsolutions.com/blog/post/a-look-back-to-philly-ete-2022/",
+    "Type": "Blog",
+    "Description": "A killer keynote by Cory Doctorow, a lively audience, and lots of new tech: here’s what our team enjoyed most about Philly ETE 2022.",
+    "Date": "2022-05-04"
+  },
+  {
+    "Title": "TechChat Tuesdays #47: Dev News Ultra",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-47-dev-news-ultra/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2022-03-15"
+  },
+  {
+    "Title": "TechChat Tuesdays #46: Dev News and Kotlin Deep Dive",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-46-dev-news-and-kotlin-deep-dive/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2022-03-01"
+  },
+  {
+    "Title": "TechChat Tuesdays #45: How do we learn new things?",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-45-how-do-we-learn-new-things/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2022-02-15"
+  },
+  {
+    "Title": "TechChat Tuesdays #44 – Dev News Grab Bag",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-44-dev-news-grab-bag/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2022-02-01"
+  },
+  {
+    "Title": "TechChat Tuesdays #43: Dev News, SPA Patterns, and an Exclusive Interview with Kent C. Dodds",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-43-dev-news-spa-patterns-and-an-exclusive-interview-with-kent-c-dodds/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2022-01-13"
+  },
+  {
+    "Title": "TechChat Tuesdays #41: Tetris in ClojureScript, Terraform 1.0, and Slack hackers",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-41-tetris-in-clojurescript-terraform-1-0-and-slack-hackers/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-06-18"
+  },
+  {
+    "Title": "A Look Back to ETE 2021",
+    "URL": "https://chariotsolutions.com/blog/post/a-look-back-to-ete-2021/",
+    "Type": "Blog",
+    "Description": "Reflecting on another successful year of Philly ETE: the logistics, the community, and the unexpected benefits of being virtual.",
+    "Date": "2021-06-08"
+  },
+  {
+    "Title": "Another Perspective on Remote Work",
+    "URL": "https://chariotsolutions.com/blog/post/another-perspective-on-remote-work/",
+    "Type": "Blog",
+    "Description": "At Chariot, we know that having flexibility for our consultants in terms of where they work is good for our business and our clients.",
+    "Date": "2021-06-03"
+  },
+  {
+    "Title": "TechChat Tuesdays #40: Chip Shortages, SolarWinds Hackers, and a Google I/O Recap",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-40-chip-shortages-solarwinds-hackers-and-a-google-i-o-recap/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-06-03"
+  },
+  {
+    "Title": "TechChat Tuesdays #39: Scala 3, Pair Programming, and a Rekindled Windows/Apple Rivalry",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-39-scala-3-pair-programming-and-a-rekindled-windows-apple-rivalry/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-05-20"
+  },
+  {
+    "Title": "TechChat Tuesdays #38: Apple’s ‘Spring Loaded’ Recap, and more!",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-38-apples-spring-loaded-recap-and-more/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-04-29"
+  },
+  {
+    "Title": "TechChat Tuesdays #37: OpenSearch, Rust News, and the “Rails of React”",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-37-opensearch-rust-rails-of-react/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-04-15"
+  },
+  {
+    "Title": "TechChat Tuesdays #36: Django 3.2, TP Robots, and New Jersey?",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-36-django-3-2-tp-robots-and-new-jersey/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-04-08"
+  },
+  {
+    "Title": "TechChat Tuesdays #35: Nivo, DALL-E and NPM Vulnerabilities",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-35-nivo-dall-e-npm-vulnerabilities/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-04-01"
+  },
+  {
+    "Title": "TechChat Tuesdays #34: JDK, NFTs, and ERC-721",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-34-jdk-nfts-and-erc-721/",
+    "Type": "Podcast",
+    "Description": "Podcast (techcast): Play in new window | Download (Duration: 30:33 — 24.9MB) | Embed",
+    "Date": "2021-03-26"
+  },
+  {
+    "Title": "TechChat Tuesdays #33: Rust, Rust-based Utilities, and Security with Jason Stelzer",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-33-rust-rust-based-utilities-and-security-with-jason-stelzer/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-03-18"
+  },
+  {
+    "Title": "TechChat Tuesdays #32: Git for Data, and ASCIIDoctor Tooling with Ken",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-32-git-data-asciidoctor-tooling/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-03-11"
+  },
+  {
+    "Title": "TechChat Tuesdays #31: Python Turns 30, and Chrome 90 is on the horizon…",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-31-this-week-in-dev-news/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-03-04"
+  },
+  {
+    "Title": "TechChat Tuesdays #30: The Mars Landing, and more",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-30-the-mars-landing-and-more/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-02-25"
+  },
+  {
+    "Title": "TechChat Tuesdays #29: Rust, Radical Candor, and more",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-29-rust-radical-candor/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-02-19"
+  },
+  {
+    "Title": "TechChat Tuesdays #28: TensorFlow with Rich Freedman",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-28-tensorflow-rich-freedman/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-02-11"
+  },
+  {
+    "Title": "TechChat Tuesdays #27: This Week in Dev News",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-27-this-week-in-dev-news/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-02-04"
+  },
+  {
+    "Title": "TechChat Tuesdays #26: Android Development with Joe Berger",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-26-android-development-with-joe-berger/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-01-20"
+  },
+  {
+    "Title": "TechChat Tuesdays #25: This Week in Dev News",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-25-this-week-in-dev-news/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2021-01-07"
+  },
+  {
+    "Title": "TechChat Tuesdays #24: This Week in Dev News",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-24-this-week-in-dev-news/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2020-12-24"
+  },
+  {
+    "Title": "TechChat Tuesdays #23: This Week in Dev News",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-23-this-week-in-devnews/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2020-12-17"
+  },
+  {
+    "Title": "TechChat Tuesdays #22: AWS re:Invent Happenings",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-22-aws-reinvent-announcements-news/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2020-12-09"
+  },
+  {
+    "Title": "TechChat Tuesdays #21: Post-Mortem Review of the AWS Outage with Keith Gregory, AWS Practice Lead",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-21-post-mortem-review-of-the-aws-outage-with-keith-gregory-aws-practice-lead/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2020-12-02"
+  },
+  {
+    "Title": "TechChat Tuesdays #20: From There To Here",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-20-from-there-to-here/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2020-11-25"
+  },
+  {
+    "Title": "TechChat Tuesdays #19: Special Guest, Eric Snyder",
+    "URL": "https://chariotsolutions.com/podcast/techchat-tuesdays-19-special-guest-eric-snyder/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2020-11-20"
+  },
+  {
+    "Title": "Discussion on the Future of Tech in 2020 and Beyond by the Chariot Solutions Team",
+    "URL": "https://chariotsolutions.com/blog/post/discussion-on-the-future-of-tech-in-2020-and-beyond-by-the-chariot-solutions-team/",
+    "Type": "Blog",
+    "Description": "This panel is a look into what tools and tech our talented team is thinking about in 2020 and beyond.",
+    "Date": "2020-02-05"
+  },
+  {
+    "Title": "What is on our Tech Radar for 2019?",
+    "URL": "https://chariotsolutions.com/blog/post/what-is-on-our-tech-radar-for-2019/",
+    "Type": "Blog",
+    "Description": "With 2019 officially kicking into gear, we decided to check in with a few members of the Chariot team who’ve revealed some of the technologies they will be looking forward to working with, or paying attention to, in 2019.",
+    "Date": "2019-01-03"
+  },
+  {
+    "Title": "ETE Screencast Night",
+    "URL": "https://chariotsolutions.com/event/video-watching-meetup/",
+    "Type": "Event",
+    "Description": "Location: Chariot Solutions 515 Pennsylvania Avenue Fort Washington, PA 19034 Date & Time: October 26 at 6:30 pm Description Missed ETE last year? Can’t wait for next year’s Philly ETE conference? Neither can we! So one of our engineers, Sujan, thought it’d be great to spend an evening watching talks from last year’s ETE Come … Read More",
+    "Date": "none"
+  },
+  {
+    "Title": "Intro to Scala – Fear No More",
+    "URL": "https://chariotsolutions.com/event/intro-scala-fear-no/",
+    "Type": "Event",
+    "Description": "Trainer: Sujan Kapadia, Technology Architect @ Chariot Solutions Location: Work-Bench 110 Fifth Avenue, Fifth Floor New York, New York 10011 Price: $100 Number of seats: 26 Date & Time: July 20, 2016 from 10:00am – 2:30pm Snacks and lunch provided Register Today! Workshop description You’ve likely heard about Scala already. Maybe some even tried it … Read More",
+    "Date": "none"
+  },
+  {
+    "Title": "TechCast #99 – James Roper on Scala",
+    "URL": "https://chariotsolutions.com/podcast/techcast-99-james-roper-scala/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2016-04-27"
+  },
+  {
+    "Title": "TechCast #98 – Adriaan Moors on Scala",
+    "URL": "https://chariotsolutions.com/podcast/techcast-98-adriaan-moors-scala/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2016-04-26"
+  },
+  {
+    "Title": "TechCast #97 – Heather Miller on Scala",
+    "URL": "https://chariotsolutions.com/podcast/techcast-97-heather-miller-scala/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2016-04-21"
+  },
+  {
+    "Title": "Intro to Scala at Philly Tech Week",
+    "URL": "https://chariotsolutions.com/event/intro-scala-philly-tech-week/",
+    "Type": "Event",
+    "Description": "You’ve likely heard about Scala already. Maybe some even tried it out and decided it wasn’t for them. Others may have stumbled upon blogs discussing highly abstract topics and ran screaming the other way. It doesn’t have to be that way. This workshop will be a gentle introduction to Scala where we’ll progress through a series of exploratory exercises.",
+    "Date": "none"
+  },
+  {
+    "Title": "TechCast #96 – Philly ETE Happy Hour Chat",
+    "URL": "https://chariotsolutions.com/podcast/techcast-96-philly-ete-happy-hour-chat/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2016-04-18"
+  },
+  {
+    "Title": "TechCast #95 – Doc Norton on Agile Metrics – “Velocity is Not the Goal”",
+    "URL": "https://chariotsolutions.com/podcast/techcast-95-doc-norton-agile-metrics-velocity-not-goal/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2016-04-09"
+  },
+  {
+    "Title": "TechCast #94 – Luke Wagner on WebAssembly",
+    "URL": "https://chariotsolutions.com/podcast/techcast-94-luke-wagner-webassembly/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2016-04-07"
+  },
+  {
+    "Title": "TechCast #93 – Ari Lerner on Angular 2",
+    "URL": "https://chariotsolutions.com/podcast/techcast-93-ari-lerner-angular-2/",
+    "Type": "Podcast",
+    "Description": "",
+    "Date": "2016-03-25"
+  },
+  {
+    "Title": "DevNews #102 – TACO, terrible testing, and party comets",
     "URL": "https://chariotsolutions.com/podcast/devnews-102-taco-terrible-testing-party-comets/",
     "Type": "Podcast",
-    "Description": "Sujan Kapadia and Eric Snyder recap weekly tech news"
+    "Description": "",
+    "Date": "2015-11-13"
   },
   {
-    "Title": "DevNews #97: Day 1 of Philly ETE 2015",
+    "Title": "DevNews #97 – Day 1 of Philly ETE 2015",
     "URL": "https://chariotsolutions.com/podcast/devnews-97-day-1-philly-ete-2015/",
     "Type": "Podcast",
-    "Description": "Michael Pigg and Sujan Kapadia discuss opening day of ETE"
+    "Description": "",
+    "Date": "2015-04-10"
   },
   {
-    "Title": "DevNews #85: Recording in front of large ETE audience",
+    "Title": "Converting a Java Spring application to Scala",
+    "URL": "https://chariotsolutions.com/blog/post/converting-java-spring-to-scala/",
+    "Type": "Blog",
+    "Description": "Supposedly Scala requires a completely different programming style. But what happens when you just want a Spring application? Is it possible to program in Scala without jumping in the deep end? Chariot’s John Shepard illustrates the difference in approach in this quick tutorial.",
+    "Date": "2014-08-15"
+  },
+  {
+    "Title": "DevNews 85 – We record ourselves in front of a large ETE audience and news ensues",
     "URL": "https://chariotsolutions.com/podcast/devnews-85-record-front-large-ete-audience-news-ensues/",
     "Type": "Podcast",
-    "Description": "Tech talk surrounded by all people tech"
+    "Description": "",
+    "Date": "2014-04-24"
   },
   {
-    "Title": "DevNews #76: HAML-esque JS templates",
+    "Title": "DevNews #76 – HAML-esque JS templates, a monitor for $400, what’s the world coming to?",
     "URL": "https://chariotsolutions.com/podcast/devnews-76-haml-esque-js-templates-monitor-400-whats-world-coming/",
     "Type": "Podcast",
-    "Description": "JavaScript templates, hardware discussion - 33:31"
+    "Description": "",
+    "Date": "2014-01-20"
   },
   {
-    "Title": "DevNews #70: Droids and flying robots taking over the world and Scala.JS",
+    "Title": "DevNews #70 – Droids and flying robots taking over the world and Scala.JS",
     "URL": "https://chariotsolutions.com/podcast/devnews-70-droids-and-flying-robots-taking-over-the-world-and-scala-js/",
     "Type": "Podcast",
-    "Description": "Robotics, cryptocurrency, JavaScript innovations - 32:43"
+    "Description": "",
+    "Date": "2013-12-02"
   },
   {
-    "Title": "DevNews #65: Apple's patent for touching glass with fingers is upheld?",
+    "Title": "The DataPhilly Meetups",
+    "URL": "https://chariotsolutions.com/blog/post/the-dataphilly-meetups/",
+    "Type": "Blog",
+    "Description": "Sujan Kapadia writes: “This year I’ve started going to the DataPhilly meetups, and I think I’m hooked. The bottom line is DataPhilly talks are very intriguing, expose you to topics you don’t encounter everyday, and give you the chance to meet “non-traditional” developers (scientists and statisticians), whose ranks are rapidly growing.”",
+    "Date": "2013-11-19"
+  },
+  {
+    "Title": "DevNews #65 – Apple’s patent for touching glass with fingers is upheld?",
     "URL": "https://chariotsolutions.com/podcast/devnews-65-apples-patent-for-touching-glass-with-fingers-is-upheld/",
     "Type": "Podcast",
-    "Description": "32:02"
+    "Description": "",
+    "Date": "2013-10-23"
   },
   {
-    "Title": "DevNews #60: Somebody buy Joel a Furby",
+    "Title": "DevNews #60 – Somebody buy Joel a Furby",
     "URL": "https://chariotsolutions.com/podcast/devnews-60-somebody-buy-joel-a-furby/",
     "Type": "Podcast",
-    "Description": "Sujan, Ken, and Joel discuss new Apple iPhones - 34:07"
+    "Description": "",
+    "Date": "2013-09-17"
   },
   {
-    "Title": "DevNews #58: The London Eye \u2013 of Sauron",
+    "Title": "DevNews #58 – The London Eye – of Sauron",
     "URL": "https://chariotsolutions.com/podcast/devnews-58-the-london-eye-of-sauron/",
     "Type": "Podcast",
-    "Description": "34:18"
+    "Description": "",
+    "Date": "2013-09-03"
+  },
+  {
+    "Title": "Simply explained: Akka Streams Backpressure",
+    "URL": "https://chariotsolutions.com/blog/post/simply-explained-akka-streams-backpressure/",
+    "Type": "Blog",
+    "Description": "Visual explanation of backpressure in Akka Streams using a simple producer-consumer example",
+    "Date": "2016-08-02"
   }
 ]

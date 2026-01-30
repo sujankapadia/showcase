@@ -1,5 +1,16 @@
 [
   {
+    "Name": "showcase",
+    "Description": "Personal showcase website built with Astro 5 and Tailwind CSS v4",
+    "URL": "https://github.com/sujankapadia/showcase",
+    "Language": "Astro",
+    "Stars": "0",
+    "Forks": "0",
+    "Private": "False",
+    "Created": "2026-01-28",
+    "Updated": "2026-01-29"
+  },
+  {
     "Name": "monolog",
     "Description": "Monolog - A single-file microblogging framework that generates static HTML from Markdown with YAML front matter. Simple, minimal, self-contained.",
     "URL": "https://github.com/sujankapadia/monolog",
@@ -8,7 +19,7 @@
     "Forks": "0",
     "Private": "False",
     "Created": "2025-10-10",
-    "Updated": "2026-01-20"
+    "Updated": "2026-01-28"
   },
   {
     "Name": "blog-mirroruniverse-ai",

@@ -14,6 +14,8 @@ const {
 } = Astro.props;
 
 const fullTitle = title === 'Sujan Kapadia' ? title : `${title} | Sujan Kapadia`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/headshot.jpg', Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -30,11 +32,43 @@ const fullTitle = title === 'Sujan Kapadia' ? title : `${title} | Sujan Kapadia`
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+    <meta property="og:image:alt" content="Sujan Kapadia" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
 
     <!-- Inter font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- JSON-LD: Person -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sujan Kapadia",
+      "url": Astro.site?.toString(),
+      "image": ogImage.toString(),
+      "jobTitle": "Chief AI Officer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Chariot Solutions"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/sujankapadia",
+        "https://github.com/sujankapadia"
+      ]
+    })} />
 
     <title>{fullTitle}</title>
     <slot name="head" />

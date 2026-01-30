@@ -67,7 +67,8 @@ The development server runs at `http://localhost:4321`.
 │   └── styles/
 │       └── global.css       # Tailwind config and custom styles
 └── public/
-    └── headshot.jpg         # Profile photo
+    ├── headshot.jpg         # Profile photo
+    └── robots.txt           # Search engine crawl rules
 ```
 
 ## Data Sources
@@ -132,7 +133,7 @@ repos:
 - **Project updates** - Aggregated microblog posts from tracked repos via monolog
 - **External links** - Open in new tabs with visual indicators
 - **Hover effects** - Cards lift with shadow on hover
-- **SEO ready** - Meta tags and Open Graph support
+- **SEO** - Open Graph, Twitter Cards, canonical URLs, auto-generated sitemap, robots.txt
 
 ## License
 
