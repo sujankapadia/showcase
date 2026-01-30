@@ -11,3 +11,6 @@ repos:
 
   - url: https://github.com/sujankapadia/showcase
     name: Showcase
+
+  - url: https://github.com/sujankapadia/claude-code-analytics
+    name: Claude Code Analytics
