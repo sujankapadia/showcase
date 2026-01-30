@@ -78,6 +78,9 @@ const languageColors: Record<string, string> = {
                   {project.Stars}
                 </span>
               </div>
+              <p class="mt-3 text-xs text-gray-500">
+                Updated {new Date(project.Updated).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+              </p>
             </a>
           ))}
         </div>
@@ -119,6 +122,9 @@ const languageColors: Record<string, string> = {
                     </span>
                   )}
                 </div>
+                <p class="mt-2 text-xs text-gray-500">
+                  Updated {new Date(project.Updated).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                </p>
               </a>
             ))}
           </div>

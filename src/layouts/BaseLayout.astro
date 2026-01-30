@@ -16,6 +16,7 @@ const {
 const fullTitle = title === 'Sujan Kapadia' ? title : `${title} | Sujan Kapadia`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL('/headshot.jpg', Astro.site);
+const buildDate = new Date().toISOString().split('T')[0];
 ---
 
 <!DOCTYPE html>
@@ -27,6 +28,7 @@ const ogImage = new URL('/headshot.jpg', Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="date" content={buildDate} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={fullTitle} />
@@ -67,7 +69,8 @@ const ogImage = new URL('/headshot.jpg', Astro.site);
       "sameAs": [
         "https://linkedin.com/in/sujankapadia",
         "https://github.com/sujankapadia"
-      ]
+      ],
+      "dateModified": buildDate
     })} />
 
     <title>{fullTitle}</title>

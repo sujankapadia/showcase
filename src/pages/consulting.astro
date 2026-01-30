@@ -1,5 +1,28 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    question: 'What types of engagements do you offer?',
+    answer: 'I offer three primary engagement types: ongoing advisory for strategic guidance, interactive workshops to upskill teams on AI tools and best practices, and hands-on implementation support from proof-of-concept through production deployment.'
+  },
+  {
+    question: 'What industries do you work with?',
+    answer: 'I work across industries including financial services, healthcare, technology, and professional services. The common thread is organizations looking to adopt AI strategically and responsibly, regardless of sector.'
+  },
+  {
+    question: 'How do you approach AI strategy for organizations new to AI?',
+    answer: 'I start with a discovery call to understand your goals and current state. From there, I help identify high-impact use cases, build a practical roadmap, and establish the foundations — data readiness, team skills, and governance — needed for successful AI adoption.'
+  },
+  {
+    question: 'Do you do hands-on implementation or just advisory?',
+    answer: 'Both. I can provide strategic advisory and also get hands-on with implementation — building prototypes, integrating AI coding agents into developer workflows, deploying solutions, and training teams to maintain and extend what we build together.'
+  },
+  {
+    question: 'How do I get started?',
+    answer: 'Start by scheduling a discovery call through the contact page. We\'ll discuss your goals, challenges, and current state. From there, I\'ll provide a tailored proposal with scope, approach, and investment options. No commitment required for the initial conversation.'
+  }
+];
 ---
 
 <BaseLayout title="Consulting" description="AI strategy, coding agents, and developer tools consulting services">
@@ -15,6 +38,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       "url": "https://sujankapadia.com"
     },
     "areaServed": "United States"
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
   })} />
   <section class="py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,6 +161,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 </p>
               </div>
             </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold text-white mb-8">
+          Frequently Asked Questions
+        </h2>
+        <div class="space-y-4">
+          {faqs.map((faq) => (
+            <details class="group bg-navy-800 rounded-xl border border-navy-600 hover:border-cyan-500/50 transition-colors">
+              <summary class="flex items-center justify-between cursor-pointer p-6 text-white font-medium list-none">
+                <span>{faq.question}</span>
+                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-6 pb-6 text-gray-400">
+                {faq.answer}
+              </div>
+            </details>
           ))}
         </div>
       </div>

@@ -1,0 +1,16 @@
+# Sujan Kapadia
+
+> Personal website of Sujan Kapadia, Chief AI Officer at Chariot Solutions.
+> AI strategy, consulting, implementation, and thought leadership.
+
+## Pages
+
+- [Home](https://sujankapadia.com/): Overview, latest thinking, and featured projects
+- [About](https://sujankapadia.com/about/): Bio, background, and areas of expertise
+- [Consulting](https://sujankapadia.com/consulting/): AI consulting, transformation, and implementation services
+- [Writing](https://sujankapadia.com/writing/): Articles and posts on LinkedIn, Medium, and Chariot Solutions blog
+- [Speaking](https://sujankapadia.com/speaking/): Conference talks and presentations
+- [Projects](https://sujankapadia.com/projects/): Open source projects on GitHub
+- [Updates](https://sujankapadia.com/updates/): Project development microblog
+- [Media](https://sujankapadia.com/media/): Videos and podcasts
+- [Contact](https://sujankapadia.com/contact/): Get in touch
