@@ -39,8 +39,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
-            { title: 'AI Agents', desc: 'Building and deploying autonomous coding assistants', icon: '01' },
-            { title: 'Developer Tools', desc: 'Creating tools that augment human capabilities', icon: '02' },
+            { title: 'AI Agents and Chatbots', desc: 'Building and deploying agents and chatbots', icon: '01', tech: ['AWS Strands and AgentCore', 'Microsoft 365 Agents', 'Azure AI Bot Service', 'Pydantic AI', 'OpenAI Agent SDK'] },
+            { title: 'Rapid Prototyping', desc: 'Using AI tools that augment human capabilities', icon: '02', tech: ['Claude Code', 'Codex', 'Cursor', 'Gemini Canvas'] },
             { title: 'AI Strategy', desc: 'Helping organizations navigate the AI landscape', icon: '03' },
             { title: 'Human-AI Collaboration', desc: 'Exploring how humans and AI work together', icon: '04' },
           ].map((item) => (
@@ -48,6 +48,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <span class="text-xs font-mono text-accent-400">{item.icon}</span>
               <h3 class="text-lg font-semibold text-white mt-2">{item.title}</h3>
               <p class="text-gray-400 mt-2">{item.desc}</p>
+              {item.tech && (
+                <div class="flex flex-wrap gap-2 mt-3">
+                  {item.tech.map((t) => (
+                    <span class="text-xs px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400">{t}</span>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
