@@ -149,4 +149,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    const type = new URLSearchParams(window.location.search).get('type');
+    if (type) {
+      const select = document.getElementById('type');
+      if (select && [...select.options].some(o => o.value === type)) {
+        select.value = type;
+      }
+    }
+  </script>
 </BaseLayout>
