@@ -4,7 +4,7 @@
 // chronologically, and runs monolog to generate an HTML fragment
 // for the /updates page.
 
-import { readFileSync, writeFileSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { execSync } from 'child_process';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -71,6 +71,50 @@ async function fetchPostsFile(repo) {
   }
 }
 
+// --- Step 2b: Fetch image assets from each repo's monolog/ directory ---
+async function fetchAssets(repo) {
+  const { url, name } = repo;
+  const postsPath = repo.path || 'monolog/posts.md';
+  const monologDir = postsPath.substring(0, postsPath.lastIndexOf('/'));
+  const branch = repo.branch || 'main';
+
+  const match = url.match(/github\.com\/([^/]+\/[^/]+)/);
+  if (!match) return;
+  const ownerRepo = match[1].replace(/\.git$/, '');
+
+  const assetsDir = resolve(ROOT, 'public', 'updates');
+  mkdirSync(assetsDir, { recursive: true });
+
+  // List files in the monolog directory
+  let files;
+  try {
+    const listing = execSync(
+      `gh api repos/${ownerRepo}/contents/${monologDir}?ref=${branch} --jq '.[].name'`,
+      { encoding: 'utf-8', timeout: 15000, stdio: ['pipe', 'pipe', 'pipe'] }
+    ).trim();
+    files = listing.split('\n').filter(f => f && !f.endsWith('.md'));
+  } catch {
+    return; // No assets or directory listing failed
+  }
+
+  for (const file of files) {
+    try {
+      const apiPath = `repos/${ownerRepo}/contents/${monologDir}/${file}?ref=${branch}`;
+      const b64 = execSync(`gh api ${apiPath} --jq '.content'`, {
+        encoding: 'utf-8',
+        timeout: 30000,
+        stdio: ['pipe', 'pipe', 'pipe'],
+      }).trim();
+
+      const buf = Buffer.from(b64, 'base64');
+      writeFileSync(resolve(assetsDir, file), buf);
+      console.log(`[OK] Fetched asset ${file} from ${name}`);
+    } catch (err) {
+      console.warn(`[WARN] Could not fetch asset ${file} from ${name}: ${err.message}`);
+    }
+  }
+}
+
 // --- Step 3: Extract individual posts from a posts.md file ---
 function extractPosts(content, projectName, projectUrl) {
   // Split on +++ delimiters to find YAML front matter blocks
@@ -119,8 +163,11 @@ function extractPosts(content, projectName, projectUrl) {
 async function main() {
   console.log('Building project updates...\n');
 
-  // Fetch all repos in parallel
-  const results = await Promise.all(config.repos.map((repo) => fetchPostsFile(repo)));
+  // Fetch all repos in parallel (posts + assets)
+  const [results] = await Promise.all([
+    Promise.all(config.repos.map((repo) => fetchPostsFile(repo))),
+    Promise.all(config.repos.map((repo) => fetchAssets(repo))),
+  ]);
 
   // Filter out failures
   const successful = results.filter(Boolean);
@@ -176,7 +223,13 @@ async function main() {
     merged += badge;
 
     if (post.content) {
-      merged += post.content + '\n\n';
+      // Rewrite relative image paths to absolute /updates/ paths so they
+      // resolve correctly regardless of trailing slash behavior
+      const content = post.content.replace(
+        /!\[([^\]]*)\]\((?!https?:\/\/)([^)]+)\)/g,
+        '![$1](/updates/$2)'
+      );
+      merged += content + '\n\n';
     }
   }
 
